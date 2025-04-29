@@ -1,17 +1,23 @@
-/* Estilização geral */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  width: 100%;
-  background-color: #0d0d0d;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0F1520;
   color: white;
 }
 
-/* Nav principal */
+header {
+  width: 100%;
+  background-color: #0F1520;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -19,12 +25,34 @@ header {
   padding: 0.8rem 2rem;
 }
 
-/* Logo */
-.logo h1 {
-  font-size: 1.8rem;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-/* Lista de links desktop */
+.logo-img {
+  margin-right: 0.4rem;
+  height: 3rem;
+  width: 3rem;
+  display: block;
+  object-fit: contain;
+}
+
+.logo-pedro {
+  font-family: "Krona One", sans-serif;
+  color: #00bfffce;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.logo-felipe {
+  font-family: "Krona One", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
 .nav-list ul {
   display: flex;
   list-style: none;
@@ -35,6 +63,7 @@ header {
 }
 
 .nav-link {
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: white;
   font-size: 1.1rem;
@@ -45,32 +74,10 @@ header {
   color: #00bcd4;
 }
 
-/* Botão de login */
-.login-button button {
-  background-color: #00bcd4;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.login-button button:hover {
-  background-color: #0097a7;
-}
-
-.login-button a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-/* Mobile menu icon */
 .mobile-menu-icon {
   display: none;
 }
 
-/* Menu hambúrguer - só span, sem imagem */
 .hamburger {
   width: 30px;
   height: 22px;
@@ -91,7 +98,6 @@ header {
   transition: 0.3s;
 }
 
-/* Animação para virar X */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -104,7 +110,6 @@ header {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile menu (oculto inicialmente) */
 .mobile-menu {
   display: none;
 }
@@ -130,10 +135,19 @@ header {
   font-size: 1.5rem;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
-  .nav-list,
-  .login-button {
+  .logo-img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .logo-pedro,
+  .logo-felipe {
+    font-size: 1rem;
+  }
+
+  .nav-list {
     display: none;
   }
 
