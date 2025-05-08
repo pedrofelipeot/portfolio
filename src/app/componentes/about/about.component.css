@@ -1,0 +1,8 @@
+.sobre-mim-img img {
+  width: 100%;
+  max-width: 250px; /* Ajuste conforme necessário */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
