@@ -1,8 +1,68 @@
-.sobre-mim-img img {
+section {
   width: 100%;
-  max-width: 250px; /* Ajuste conforme necessário */
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  object-fit: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem; /* 40px */
+  overflow-x: hidden; /* evita scroll lateral */
 }
 
+.geral {
+  display: flex;
+  gap: 2.5rem; /* 40px */
+  flex-wrap: wrap;
+  max-width: 62.5rem; /* 1000px */
+  width: 100%;
+}
+
+.imagem img {
+  width: 18.75rem; /* 300px */
+  height: 18.75rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.125rem solid #ccc; /* 2px */
+}
+
+.conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.conteudo h1 {
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.conteudo p {
+  margin-bottom: 0.625rem; /* 10px */
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 48rem) { /* 768px */
+  .geral {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem; /* 20px */
+  }
+
+  .conteudo {
+    align-items: center;
+  }
+
+  .conteudo h1 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .conteudo p {
+    font-size: 1rem; /* 16px */
+  }
+
+  .imagem img {
+    width: 12.5rem; /* 200px */
+    height: 12.5rem;
+  }
+}
