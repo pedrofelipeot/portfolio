@@ -7,6 +7,7 @@ import { BackgroundComponent } from './componentes/background/background.compone
 import { MenuComponent } from './componentes/menu/menu.component';
 import { IntroducaoComponent } from './componentes/introducao/introducao.component';
 import { AboutComponent } from './componentes/about/about.component';
+import { ContatosComponent } from './componentes/contatos/contatos.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutComponent } from './componentes/about/about.component';
     BackgroundComponent,
     MenuComponent,
     IntroducaoComponent,
-    AboutComponent
+    AboutComponent,
+    ContatosComponent
   ],
   imports: [
     BrowserModule,

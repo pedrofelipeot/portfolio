@@ -1,0 +1,25 @@
+<section class="contato-section">
+  <div class="contato-box">
+    <h2>Entre em Contato</h2>
+
+    <!-- Meios de Contato -->
+    <div class="contato-meios">
+      <a href="mailto:seuemail@email.com"><img src="assets/email.png" class="icones-contatos"> seuemail.com</a>
+      <a href="https://linkedin.com/in/seulink" target="_blank"><img src="assets/linkedin.png" class="icones-contatos"> LinkedIn</a>
+      <a href="https://github.com/seugithub" target="_blank"><img src="assets/github.png" class="icones-contatos"> GitHub</a>
+    </div>
+
+    <!-- Formulário -->
+    <form [attr.action]="formAction" method="POST" class="form-container">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" placeholder="Sua mensagem..." rows="5" required></textarea>
+
+      <input type="text" name="_honey" style="display:none">
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Base colorida por baixo -->
+  <div class="contato-fundo"></div>
+</section>
