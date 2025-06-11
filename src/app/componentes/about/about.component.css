@@ -4,24 +4,36 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem; /* 40px */
-  overflow-x: hidden; /* evita scroll lateral */
+  padding: 2.5rem;
+  background: #ececec; /* fundo claro e suave */
+  overflow-x: hidden;
 }
-
+.conteudo-titulo{
+  display: flex;
+  justify-content: center;
+}
+.conteudo-texto{
+  margin-left: 60px;
+}
 .geral {
   display: flex;
-  gap: 2.5rem; /* 40px */
+  gap: 2.5rem;
   flex-wrap: wrap;
-  max-width: 62.5rem; /* 1000px */
+  max-width: 62.5rem;
   width: 100%;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* sombra suave */
 }
 
 .imagem img {
-  width: 18.75rem; /* 300px */
+  width: 18.75rem;
   height: 18.75rem;
   object-fit: cover;
   border-radius: 50%;
-  border: 0.125rem solid #ccc; /* 2px */
+  border: 3px solid #dce3f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* leve destaque */
 }
 
 .conteudo {
@@ -32,21 +44,26 @@ section {
 }
 
 .conteudo h1 {
-  margin-bottom: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 600;
 }
 
 .conteudo p {
-  margin-bottom: 0.625rem; /* 10px */
-  line-height: 1.6;
+  margin-bottom: 0.625rem;
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.05rem;
 }
 
 /* Responsividade */
-@media (max-width: 48rem) { /* 768px */
+@media (max-width: 768px) {
   .geral {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.25rem; /* 20px */
+    padding: 1.5rem;
   }
 
   .conteudo {
@@ -54,15 +71,15 @@ section {
   }
 
   .conteudo h1 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.6rem;
   }
 
   .conteudo p {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
   }
 
   .imagem img {
-    width: 12.5rem; /* 200px */
+    width: 12.5rem;
     height: 12.5rem;
   }
 }
