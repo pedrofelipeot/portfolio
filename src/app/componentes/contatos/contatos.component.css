@@ -6,6 +6,9 @@
   align-items: center;
 
 }
+.contato-box > *:not(:last-child) {
+  margin-bottom: 24px; /* aumenta o espaçamento vertical entre os filhos */
+}
 
 .contato-box {
   background-color: white;

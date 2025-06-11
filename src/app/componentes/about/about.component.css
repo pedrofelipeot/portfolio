@@ -5,7 +5,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
-  background: #ececec; /* fundo claro e suave */
+  background: #ececec; 
   overflow-x: hidden;
 }
 .conteudo-titulo{

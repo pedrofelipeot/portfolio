@@ -1,32 +1,34 @@
-<section class="timeline-section">
-  <h2>Sua Jornada</h2>
+<section class="timeline-wrapper">
+  <div class="timeline-section">
+    <h2>Sua Jornada</h2>
 
-  <div class="timeline-item">
-    <button class="timeline-toggle" (click)="alternar(0)">
-      {{ abertos[0] ? '▼' : '▶' }} 2023 — Início da jornada
-    </button>
-    <div class="timeline-content" *ngIf="abertos[0]">
-      <p>📘 Curso Java (CEAP)</p>
-      <p>🎓 Início da faculdade (Uninassau)</p>
+    <div class="timeline-item">
+      <button class="timeline-toggle" (click)="alternar(0)">
+        {{ abertos[0] ? '▼' : '▶' }} 2023 — Início da jornada
+      </button>
+      <div class="timeline-content" *ngIf="abertos[0]">
+        <p>📘 Curso Java (CEAP)</p>
+        <p>🎓 Início da faculdade (Uninassau)</p>
+      </div>
     </div>
-  </div>
 
-  <div class="timeline-item">
-    <button class="timeline-toggle" (click)="alternar(1)">
-      {{ abertos[1] ? '▼' : '▶' }} 2024 — Projetos práticos
-    </button>
-    <div class="timeline-content" *ngIf="abertos[1]">
-      <p>💻 Projeto Node.js</p>
-      <p>🌐 Projeto Angular (Portfólio)</p>
+    <div class="timeline-item">
+      <button class="timeline-toggle" (click)="alternar(1)">
+        {{ abertos[1] ? '▼' : '▶' }} 2024 — Projetos práticos
+      </button>
+      <div class="timeline-content" *ngIf="abertos[1]">
+        <p>💻 Projeto Node.js</p>
+        <p>🌐 Projeto Angular (Portfólio)</p>
+      </div>
     </div>
-  </div>
 
-  <div class="timeline-item">
-    <button class="timeline-toggle" (click)="alternar(2)">
-      {{ abertos[2] ? '▼' : '▶' }} 2025 — Aprofundamento
-    </button>
-    <div class="timeline-content" *ngIf="abertos[2]">
-      <p>🚀 Curso Java + Spring (Rocketseat)</p>
+    <div class="timeline-item">
+      <button class="timeline-toggle" (click)="alternar(2)">
+        {{ abertos[2] ? '▼' : '▶' }} 2025 — Aprofundamento
+      </button>
+      <div class="timeline-content" *ngIf="abertos[2]">
+        <p>🚀 Curso Java + Spring (Rocketseat)</p>
+      </div>
     </div>
   </div>
 </section>

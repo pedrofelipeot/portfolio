@@ -1,43 +1,89 @@
+/* Caixa maior para cobrir todo o fundo */
+.timeline-wrapper {
+  background: #ececec; /* Cor desejada no fundo geral */
+  padding: 60px 20px;
+}
+
+/* Seção da timeline centralizada */
 .timeline-section {
   padding: 40px 20px;
   max-width: 600px;
   margin: auto;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white; /* Cor do conteúdo principal */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
+/* Título centralizado e estilizado */
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+/* Cada item da linha do tempo */
 .timeline-item {
-  margin-bottom: 16px;
-  border-radius: 8px;
-  overflow: hidden; /* ajuda a manter bordas arredondadas se o conteúdo expandir */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  transition: transform 0.2s;
 }
 
+.timeline-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Botão de expansão */
 .timeline-toggle {
-  background: #0077ff;
+  background: linear-gradient(90deg, #0077ff, #005fd1);
   color: white;
-  padding: 12px 16px;
+  padding: 14px 18px;
   width: 100%;
   text-align: left;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .timeline-toggle:hover {
-  background: #005fd1;
+  background: linear-gradient(90deg, #005fd1, #004bb3);
 }
 
+/* Conteúdo revelado */
 .timeline-content {
-  background: #f0f4ff;
-  padding: 12px 16px;
-  border-top: 1px solid #ccc;
+  background: #eef3fd;
+  padding: 16px 20px;
+  border-top: 1px solid #d0d8f0;
   animation: fadeIn 0.3s ease-in-out;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* animação suave de entrada */
+.timeline-content p {
+  margin: 6px 0;
+}
+
+/* Animação de entrada */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
