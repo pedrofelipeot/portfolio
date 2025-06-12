@@ -3,24 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BackgroundComponent } from './componentes/background/background.component';
-import { MenuComponent } from './componentes/menu/menu.component';
-import { IntroducaoComponent } from './componentes/introducao/introducao.component';
-import { AboutComponent } from './componentes/about/about.component';
-import { ContatosComponent } from './componentes/contatos/contatos.component';
-import { FormacaoAcademicaComponent } from './componentes/formacao-academica/formacao-academica.component';
-import { LinhaTempoComponent } from './componentes/linha-tempo/linha-tempo.component';
+
+// Componente principal da Home (estrutura geral)
+import { HomeComponent } from './componentes/Home/home.component';
+
+// Componentes de seções da Home
+import { MenuComponent } from './componentes/Home/secoes/menu/menu.component';
+import { BackgroundComponent } from './componentes/Home/secoes/background/background.component';
+import { IntroducaoComponent } from './componentes/Home/secoes/introducao/introducao.component';
+import { AboutComponent } from './componentes/Home/secoes/about/about.component';
+import { FormacaoAcademicaComponent } from './componentes/Home/secoes/formacao-academica/formacao-academica.component';
+import { LinhaTempoComponent } from './componentes/Home/secoes/linha-tempo/linha-tempo.component';
+import { ContatosComponent } from './componentes/Home/secoes/contatos/contatos.component';
+
+// Demais componentes
+import { HabilidadesComponent } from './componentes/Habilidades/habilidades.component';
+import { ExperienciasComponent } from './componentes/Experiencias/experiencias.component';
+import { ProjetosComponent } from './componentes/Projetos/projetos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BackgroundComponent,
+    HomeComponent,
     MenuComponent,
+    BackgroundComponent,
     IntroducaoComponent,
     AboutComponent,
-    ContatosComponent,
     FormacaoAcademicaComponent,
-    LinhaTempoComponent
+    LinhaTempoComponent,
+    ContatosComponent,
+    HabilidadesComponent,
+    ExperienciasComponent,
+    ProjetosComponent
   ],
   imports: [
     BrowserModule,

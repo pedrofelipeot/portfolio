@@ -1,0 +1,184 @@
+
+/* -------------------- Títulos das seções internas -------------------- */
+.card.agrupador h2 {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  background-color: #0f1520;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-left: 5px solid #0690b9;
+  border-radius: 6px;
+}
+
+
+/* -------------------- Container de Cards -------------------- */
+.cards-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------- Card base -------------------- */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Card Agrupador */
+.card.agrupador {
+  padding: 2rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+/* Card Pequeno */
+.card.pequeno {
+  flex: 1 1 260px;
+  max-width: 320px;
+}
+
+/* -------------------- Cabeçalho do Card -------------------- */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.cabecalho img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cabecalho h3 {
+  font-size: 1.2rem;
+  color: #005f73;
+  margin: 0;
+}
+
+.cabecalho small {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+/* -------------------- Conteúdo do Card -------------------- */
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.card p em {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.card p em strong {
+  color: #004d40;
+}
+
+/* -------------------- Barra de Progresso (se usar) -------------------- */
+.barra {
+  background: #e0e0e0;
+  border-radius: 15px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progresso {
+  background: #008080;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  transition: width 0.5s ease;
+}
+
+/* -------------------- Linha do Tempo -------------------- */
+.linha-tempo {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.linha-tempo h2 {
+  font-size: 1.8rem;
+  background-color: #0f1520;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-left: 5px solid #005f73;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid #005f73;
+}
+
+.etapa {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.etapa .ponto {
+  position: absolute;
+  left: -11px;
+  top: 0.4rem;
+  width: 16px;
+  height: 16px;
+  background-color: #005f73;
+  border-radius: 50%;
+  border: 2px solid #0f1520;
+}
+
+.etapa .conteudo {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.etapa h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0f1520;
+}
+
+.etapa p {
+  margin: 0.4rem 0 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* -------------------- Responsividade -------------------- */
+@media (max-width: 900px) {
+  .cards-inline {
+    justify-content: center;
+  }
+
+  .card.pequeno {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .card.agrupador h2 {
+    font-size: 1.4rem;
+  }
+}
