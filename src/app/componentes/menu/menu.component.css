@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-
-body {
-  
-  background-color: #0F1520;
-  color: white;
-}
 
 header {
   width: 100%;
   background-color: #0F1520;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-bar {

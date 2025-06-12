@@ -10,7 +10,7 @@
   max-width: 600px;
   margin: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: white; /* Cor do conteúdo principal */
+  background: #0F1520;; /* Cor do conteúdo principal */
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
@@ -20,7 +20,6 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #003366;
 }
 
 /* Cada item da linha do tempo */
