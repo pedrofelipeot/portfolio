@@ -1,15 +1,13 @@
-
 /* -------------------- Títulos das seções internas -------------------- */
 .card.agrupador h2 {
   font-size: 1.6rem;
-  margin: 2rem 0 1rem;
+  margin: 4rem 1rem;
   background-color: #0f1520;
   color: #fff;
   padding: 0.6rem 1rem;
   border-left: 5px solid #0690b9;
   border-radius: 6px;
 }
-
 
 /* -------------------- Container de Cards -------------------- */
 .cards-inline {
@@ -44,6 +42,10 @@
 .card.pequeno {
   flex: 1 1 260px;
   max-width: 320px;
+  background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
+  background-size: 600% 600%;
+  animation: gradienteAnimado 15s ease infinite;
+  transition: transform 0.3s ease;
 }
 
 /* -------------------- Cabeçalho do Card -------------------- */
@@ -62,49 +64,25 @@
 
 .cabecalho h3 {
   font-size: 1.2rem;
-  color: #005f73;
+  color: white;
   margin: 0;
-}
-
-.cabecalho small {
-  display: block;
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 0.2rem;
 }
 
 /* -------------------- Conteúdo do Card -------------------- */
 .card p {
   font-size: 0.95rem;
-  color: #444;
+  color: white;
   margin-bottom: 0.8rem;
   line-height: 1.4;
 }
 
 .card p em {
   font-size: 0.85rem;
-  color: #666;
+  color: white;
 }
 
 .card p em strong {
-  color: #004d40;
-}
-
-/* -------------------- Barra de Progresso (se usar) -------------------- */
-.barra {
-  background: #e0e0e0;
-  border-radius: 15px;
-  height: 12px;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 0.5rem;
-}
-
-.progresso {
-  background: #008080;
-  height: 100%;
-  border-radius: 15px 0 0 15px;
-  transition: width 0.5s ease;
+  color: #ffffff;
 }
 
 /* -------------------- Linha do Tempo -------------------- */
@@ -152,7 +130,7 @@
   background-color: #fff;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .etapa h3 {
@@ -166,6 +144,14 @@
   color: #333;
   font-size: 0.95rem;
 }
+.divisoria {
+  border: none;
+  height: 2px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
 
 /* -------------------- Responsividade -------------------- */
 @media (max-width: 900px) {
@@ -180,5 +166,18 @@
 
   .card.agrupador h2 {
     font-size: 1.4rem;
+  }
+}
+
+/* -------------------- Animação Gradiente -------------------- */
+@keyframes gradienteAnimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

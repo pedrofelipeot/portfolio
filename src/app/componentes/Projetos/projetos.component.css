@@ -1,0 +1,130 @@
+/* Container principal com padding-top para evitar sobreposição com o menu fixo */
+.container {
+  margin: auto;
+  padding: 5rem 30px 40px; /* 5rem para compensar a altura do menu */
+  font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+#titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 1rem;
+  background-color: #0f1520;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-left: 5px solid #0690b9;
+  border-radius: 6px;
+}
+
+/* Menu horizontal com espaçamento e responsividade */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Seções com espaçamento vertical */
+.sessao {
+  margin-top: 6rem;
+}
+
+/* Título das seções */
+.sessao-titulo {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 25px;
+  border-left: 5px solid #007BFF;
+  padding-left: 15px;
+}
+
+/* Grade de cards responsiva */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Estilo dos cards */
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  margin: 8px 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Responsividade adicional para telas muito pequenas */
+@media (max-width: 480px) {
+  #titulo {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .sessao-titulo {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}

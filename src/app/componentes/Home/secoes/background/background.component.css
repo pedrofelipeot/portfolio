@@ -12,7 +12,9 @@
   overflow: hidden;
   z-index: -1; /* Coloquei -1 para garantir que fique abaixo de outros elementos */
 }
-
+.baixar{
+  padding-top: 4.5rem;
+}
 .colorBox {
   z-index: 1; /* <<< acima do fundo mas abaixo do menu */
   filter: brightness(1.1);
@@ -38,6 +40,7 @@
   animation: animBack 6s linear infinite;
   z-index: 1; /* também acima do fundo base */
 }
+
 
 @keyframes animBack {
   0% {
