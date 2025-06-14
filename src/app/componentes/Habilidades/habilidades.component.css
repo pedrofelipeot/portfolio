@@ -1,183 +1,257 @@
-/* -------------------- Títulos das seções internas -------------------- */
 .card.agrupador h2 {
-  font-size: 1.6rem;
-  margin: 4rem 1rem;
-  background-color: #0f1520;
+  font-size: 1.8rem;
+  margin: 4rem 0 4rem;
+  padding: 0.75rem 1rem;
+  background-color: #0F1520;
   color: #fff;
-  padding: 0.6rem 1rem;
-  border-left: 5px solid #0690b9;
-  border-radius: 6px;
+  border-left: 5px solid #00b4d8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* -------------------- Container de Cards -------------------- */
+.titulo-azul {
+  color: #00b4d8;
+}
+
+
+
+.card.agrupador {
+  background: #1a1a2e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
 .cards-inline {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 3rem;
 }
 
-/* -------------------- Card base -------------------- */
-.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  padding: 1rem 1.2rem;
+.card.pequeno {
+  flex: 1 1 280px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-/* Card Agrupador */
-.card.agrupador {
-  padding: 2rem;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
+  justify-content: stretch;
+  background-color: #212433;
   border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.2rem;
+  animation: mudarCor 8s infinite alternate ease-in-out;
 }
 
-/* Card Pequeno */
-.card.pequeno {
-  flex: 1 1 260px;
-  max-width: 320px;
-  background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
-  background-size: 600% 600%;
-  animation: gradienteAnimado 15s ease infinite;
-  transition: transform 0.3s ease;
+.card.pequeno .conteudo-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  height: 100%;
 }
 
-/* -------------------- Cabeçalho do Card -------------------- */
 .cabecalho {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.8rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .cabecalho img {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
 }
 
 .cabecalho h3 {
   font-size: 1.2rem;
-  color: white;
+  color: #00b4d8;
   margin: 0;
 }
 
-/* -------------------- Conteúdo do Card -------------------- */
-.card p {
+.descricao {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.descricao p {
   font-size: 0.95rem;
-  color: white;
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
+  color: #cfd4e0;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  text-align: left;
 }
 
-.card p em {
-  font-size: 0.85rem;
-  color: white;
+.conteudo-card > .divisoria + p {
+  min-height: 48px; /* ou ajuste maior, se quiser mais espaço mínimo */
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
-.card p em strong {
+
+.divisoria {
+  border: none;
+  height: 1px;
+  background: #444;
+  margin: 1rem 0;
+}
+
+.card.pequeno p em {
+  color: #aaa;
+  font-style: italic;
+}
+
+
+
+.card.pequeno strong {
+  color: #fff;
+}
+
+.card.pequeno:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Linha do tempo */
+/* Fundo cinza indo até o final da tela */
+.linha-tempo {
+  background-color: #f5f5f5;
+  padding: 3rem 1rem;
+}
+
+/* Centralizando e limitando a largura do conteúdo interno */
+.linha-tempo .timeline {
+  max-width: 800px;  /* você pode ajustar: 700px, 900px... */
+  margin: 0 auto;
+  position: relative;
+  border-left: 3px solid #00b4d8;
+  padding-left: 2rem;
+}
+
+/* Título da Linha do Tempo - Centralizado */
+.linha-tempo .linha-titulo {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-size: 1.6rem; /* um pouco menor */
+  padding: 0.6rem 1rem;
+  background-color: #0F1520;
+  color: #f5f5f5;
+  border-left: 5px solid #00b4d8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline Etapas (mantém o layout) */
+.linha-tempo .etapa {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.linha-tempo .ponto {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.4rem;
+  width: 16px;
+  height: 16px;
+  background: #00b4d8;
+  border-radius: 50%;
+  border: 2px solid #0e1117;
+}
+
+.linha-tempo .conteudo {
+  background: #2b2e4a;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.linha-tempo .etapa h3 {
+  font-size: 1.1rem;
   color: #ffffff;
 }
 
-/* -------------------- Linha do Tempo -------------------- */
-.linha-tempo {
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+.linha-tempo .etapa p {
+  color: #d1d1d1;
+  font-size: 0.9rem;
 }
 
-.linha-tempo h2 {
-  font-size: 1.8rem;
-  background-color: #0f1520;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-left: 5px solid #005f73;
-  border-radius: 6px;
+.linha-titulo{
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: 1.8rem;
+  padding: 0.75rem 1rem;
+  background-color: #0F1520;
+  color: #f5f5f5;
+  border-left: 5px solid #00b4d8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .timeline {
   position: relative;
+  border-left: 3px solid #00b4d8;
   padding-left: 2rem;
-  border-left: 3px solid #005f73;
 }
 
 .etapa {
   position: relative;
   margin-bottom: 2rem;
-  padding-left: 1rem;
 }
 
-.etapa .ponto {
+.ponto {
   position: absolute;
-  left: -11px;
+  left: -1.5rem;
   top: 0.4rem;
   width: 16px;
   height: 16px;
-  background-color: #005f73;
+  background: #00b4d8;
   border-radius: 50%;
-  border: 2px solid #0f1520;
+  border: 2px solid #0e1117;
 }
 
-.etapa .conteudo {
-  background-color: #fff;
+.conteudo {
+  background: #2b2e4a;
+  border-radius: 8px;
   padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .etapa h3 {
-  margin: 0;
   font-size: 1.2rem;
-  color: #0f1520;
+  color: #ffffff;
 }
 
 .etapa p {
-  margin: 0.4rem 0 0;
-  color: #333;
+  color: #d1d1d1;
   font-size: 0.95rem;
 }
-.divisoria {
-  border: none;
-  height: 2px;
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
 
-
-/* -------------------- Responsividade -------------------- */
-@media (max-width: 900px) {
-  .cards-inline {
-    justify-content: center;
-  }
-
-  .card.pequeno {
-    max-width: 100%;
-    flex-basis: 100%;
-  }
-
-  .card.agrupador h2 {
-    font-size: 1.4rem;
-  }
-}
-
-/* -------------------- Animação Gradiente -------------------- */
-@keyframes gradienteAnimado {
+@keyframes mudarCor {
   0% {
-    background-position: 0% 50%;
+    background-color: #040122;
   }
   50% {
-    background-position: 100% 50%;
+    background-color: #070246;
   }
   100% {
-    background-position: 0% 50%;
+    background-color: #040122;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-inline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card.agrupador {
+    margin: 1rem;
+    padding: 1rem;
   }
 }
