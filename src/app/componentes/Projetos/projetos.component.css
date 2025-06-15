@@ -1,130 +1,160 @@
-/* Container principal com padding-top para evitar sobreposição com o menu fixo */
-.container {
-  margin: auto;
-  padding: 5rem 30px 40px; /* 5rem para compensar a altura do menu */
-  font-family: Arial, sans-serif;
+/* -------------------- Fundo geral -------------------- */
+.fundo-projetos {
+  background-color: #1a1a2e;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 60px;
 }
 
-/* Título principal */
+/* -------------------- Container central -------------------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 20px 40px;
+  background-color: #1a1a2e;
+}
+
+/* -------------------- Título principal -------------------- */
 #titulo {
   text-align: center;
-  font-size: 2rem;
-  margin: 2rem 1rem;
-  background-color: #0f1520;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-left: 5px solid #0690b9;
-  border-radius: 6px;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 3rem;
 }
 
-/* Menu horizontal com espaçamento e responsividade */
+/* -------------------- Menu com divisórias -------------------- */
 .menu {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
+  align-items: center;
   flex-wrap: wrap;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .menu a {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 12px 20px;
   text-decoration: none;
-  color: #007BFF;
+  color: white;
   font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border-right: 1px solid #444;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:last-child {
+  border-right: none;
 }
 
 .menu a:hover {
-  background-color: rgba(0, 123, 255, 0.1);
-  text-decoration: underline;
-  color: #0056b3;
+  background-color: #222;
+  color: #69c0ff;
 }
 
-/* Seções com espaçamento vertical */
+/* Aba ativa (igual ao roxo do exemplo Behance) */
+.menu a.active {
+  background-color: #7d00ff;
+  color: white;
+}
+
+/* -------------------- Seções -------------------- */
 .sessao {
-  margin-top: 6rem;
+  margin-top: 5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Título das seções */
 .sessao-titulo {
-  font-size: 1.8rem;
-  color: #222;
+  font-size: 1.6rem;
+  color: #fff;
   margin-bottom: 25px;
   border-left: 5px solid #007BFF;
   padding-left: 15px;
 }
 
-/* Grade de cards responsiva */
+/* -------------------- Layout dos cards redondos -------------------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
 }
 
-/* Estilo dos cards */
 .card {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  min-height: 200px;
+  background: #2a2a40;
+  border-radius: 50%;
+  padding: 30px;
+  height: 240px;
+  width: 240px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: auto;
 }
 
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
-  margin-top: 0;
   font-size: 1.2rem;
-  color: #333;
+  margin-bottom: 10px;
 }
 
 .card p {
-  margin: 8px 0;
-  color: #555;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 .card a {
-  display: inline-block;
-  margin-top: 12px;
-  color: #007BFF;
-  text-decoration: none;
+  margin-top: 8px;
+  color: #69c0ff;
   font-weight: 500;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .card a:hover {
   text-decoration: underline;
-  color: #0056b3;
+  color: #96d4ff;
 }
 
-/* Responsividade adicional para telas muito pequenas */
-@media (max-width: 480px) {
-  #titulo {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
+/* -------------------- Data no topo dos cards -------------------- */
+.card::before {
+  content: attr(data-date);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #7d00ff;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
 
-  .sessao-titulo {
-    font-size: 1.5rem;
-  }
-
-  .menu {
-    gap: 16px;
-  }
-
+/* -------------------- Responsivo -------------------- */
+@media (max-width: 500px) {
   .card {
-    padding: 16px;
+    height: 180px;
+    width: 180px;
+    padding: 20px;
+  }
+
+  .menu a {
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }

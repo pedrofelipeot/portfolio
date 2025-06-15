@@ -1,71 +1,64 @@
-<div class="container">
-  <h2 id="titulo"><span class="titulo-azul">Meus</span> <span class="titulo-branco">Projetos</span></h2>
+<section class="fundo-projetos">
+  <div class="container">
+    <h2 id="titulo"><span class="titulo-azul">Meus</span> <span class="titulo-branco">Projetos</span></h2>
 
-  <nav class="menu">
-    <!-- Usar routerLink com fragment para navegação dentro da página -->
-    <a [routerLink]="[]" fragment="frontend">Front-end</a>
-    <a [routerLink]="[]" fragment="backend">Back-end</a>
-    <a [routerLink]="[]" fragment="jogos">Jogos</a>
-  </nav>
+    <nav class="menu">
+      <!-- Para testar, coloque a classe active na aba que quiser -->
+      <a class="active" [routerLink]="[]" fragment="frontend">Front-end</a>
+      <a [routerLink]="[]" fragment="jogos">Jogos</a>
+      <a [routerLink]="[]" fragment="backend">Back-end</a>
+    </nav>
 
-  <!-- Sessão: Front-end -->
-  <section id="frontend" class="sessao">
-    <h2 class="sessao-titulo">Projetos Front-end</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Portfólio Angular</h3>
-        <p>Site pessoal feito em Angular.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+    <!-- Sessão: Front-end -->
+    <section id="frontend" class="sessao">
+      <h2 class="sessao-titulo">Projetos Front-end</h2>
+      <div class="cards">
+        <div class="card" data-date="Maio 2024">
+          <h3>Portfólio Angular</h3>
+          <p>Site pessoal feito em Angular.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </div>
+        <div class="card" data-date="Março 2024">
+          <h3>Clima App</h3>
+          <p>Aplicativo de previsão do tempo com API.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </div>
+        
       </div>
-      <div class="card">
-        <h3>Clima App</h3>
-        <p>Aplicativo de previsão do tempo com API.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-      </div>
-      <div class="card">
-        <h3>Clima App</h3>
-        <p>Aplicativo de previsão do tempo com API.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Sessão: Back-end -->
-  <section id="backend" class="sessao">
-    <h2 class="sessao-titulo">Projetos Back-end</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>API de Usuários</h3>
-        <p>CRUD completo com Spring Boot.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+    <!-- Sessão: Back-end -->
+    <section id="backend" class="sessao">
+      <h2 class="sessao-titulo">Projetos Back-end</h2>
+      <div class="cards">
+        <div class="card" data-date="Janeiro 2024">
+          <h3>API de Usuários</h3>
+          <p>CRUD completo com Spring Boot.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </div>
+        <div class="card" data-date="Dezembro 2023">
+          <h3>Sistema de Login</h3>
+          <p>Autenticação com JWT.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Sistema de Login</h3>
-        <p>Autenticação com JWT.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-      </div>
-       <div class="card">
-        <h3>API de Usuários</h3>
-        <p>CRUD completo com Spring Boot.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Sessão: Jogos -->
-  <section id="jogos" class="sessao">
-    <h2 class="sessao-titulo">Projetos de Jogos</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Jogo da Velha</h3>
-        <p>Feito em Java com Swing.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+    <!-- Sessão: Jogos -->
+    <section id="jogos" class="sessao">
+      <h2 class="sessao-titulo">Projetos de Jogos</h2>
+      <div class="cards">
+        <div class="card" data-date="Outubro 2023">
+          <h3>Jogo da Velha</h3>
+          <p>Feito em Java com Swing.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </div>
+        <div class="card" data-date="Setembro 2023">
+          <h3>Pong</h3>
+          <p>Jogo criado com Processing.</p>
+          <a href="#" target="_blank">Ver projeto</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Pong</h3>
-        <p>Jogo criado com Processing.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-      </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
+</section>
