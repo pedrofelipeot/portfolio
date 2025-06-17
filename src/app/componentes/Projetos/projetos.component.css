@@ -19,7 +19,8 @@
   text-align: center;
   font-size: 2.5rem;
   color: white;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 /* -------------------- Menu com divisórias -------------------- */
@@ -52,12 +53,6 @@
 .menu a:hover {
   background-color: #222;
   color: #69c0ff;
-}
-
-/* Aba ativa (igual ao roxo do exemplo Behance) */
-.menu a.active {
-  background-color: #7d00ff;
-  color: white;
 }
 
 /* -------------------- Seções -------------------- */

@@ -1,0 +1,236 @@
+.fundo-experiencia {
+  background: linear-gradient(135deg, #1a1a2e, #162447);
+  color: #fff;
+  padding: 5rem 20px;
+  
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.titulo-principal span {
+  color: #00b7ff;
+}
+
+/* Timeline de Experiências */
+.experiencia-timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 3px solid #00b7ff;
+  padding-left: 20px;
+}
+
+.experiencia-bloco {
+  background: #0f1520;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia-bloco::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #00b7ff;
+  border-radius: 50%;
+  position: absolute;
+  left: -30px;
+  top: 22px;
+  border: 2px solid #0f1520;
+}
+
+.experiencia-bloco:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(6,144,185,0.3);
+}
+
+.experiencia-bloco h3 {
+  color: #00b7ff;
+  margin-bottom: 1rem;
+}
+
+.experiencia-bloco ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experiencia-bloco ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.experiencia-bloco ul li::before {
+  content: "•";
+  color: #00b7ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Imagens nas experiências */
+.experiencia-bloco .imagem-experiencia {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.experiencia-bloco .imagem-experiencia img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia-bloco .imagem-experiencia img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(6,144,185,0.3);
+}
+
+/* Soft Skills Section com fundo semitransparente e blur */
+.soft-skills-section {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  background-color: rgba(15, 21, 32, 0.85); /* Fundo escuro translúcido */
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  position: relative;
+  backdrop-filter: blur(6px); /* efeito blur suave */
+  z-index: 1;
+}
+
+.soft-skills-section h3 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* Grid das soft skills */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+/* Cartões individuais */
+.skill-card {
+  background: #1a2a3e;
+  padding: 15px 18px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(0, 183, 255, 0.1);
+  user-select: none;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 183, 255, 0.35);
+  background: #14355f;
+  color: #a0d9ff;
+}
+
+
+/* Animações */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Resumo Profissional */
+.resumo-profissional {
+  background: #0f1520;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 6rem;
+
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  border-left: 5px solid #00b7ff;
+}
+
+.resumo-profissional h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Ferramentas */
+.ferramentas-section {
+  background: #0f1520;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  border-left: 5px solid #00b7ff;
+}
+
+.ferramentas-section h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.ferramentas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+}
+
+.ferramentas-grid img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.ferramentas-grid img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.4);
+}
+
+@media (max-width: 600px) {
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  .experiencia-timeline {
+    border-left: 2px solid #00b7ff;
+    padding-left: 10px;
+  }
+
+  .experiencia-bloco::before {
+    left: -22px;
+  }
+}
