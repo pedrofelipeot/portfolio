@@ -1,64 +1,103 @@
 <section class="fundo-projetos">
   <div class="container">
-    <h2 id="titulo"><span class="titulo-azul">Meus</span> <span class="titulo-branco">Projetos</span></h2>
+    <h2 id="titulo">
+      <span class="titulo-azul">Meus</span> <span class="titulo-branco">Projetos</span>
+    </h2>
 
     <nav class="menu">
-      <!-- Para testar, coloque a classe active na aba que quiser -->
       <a class="active" [routerLink]="[]" fragment="frontend">Front-end</a>
       <a [routerLink]="[]" fragment="jogos">Jogos</a>
       <a [routerLink]="[]" fragment="backend">Back-end</a>
     </nav>
 
-    <!-- Sessão: Front-end -->
+    <!-- Front-end -->
     <section id="frontend" class="sessao">
       <h2 class="sessao-titulo">Projetos Front-end</h2>
       <div class="cards">
-        <div class="card" data-date="Maio 2024">
+        <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
           <h3>Portfólio Angular</h3>
           <p>Site pessoal feito em Angular.</p>
-          <a href="#" target="_blank">Ver projeto</a>
+          <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
         </div>
-        <div class="card" data-date="Março 2024">
+        <div class="card" data-date="Março 2024" data-projeto="clima-app">
           <h3>Clima App</h3>
           <p>Aplicativo de previsão do tempo com API.</p>
-          <a href="#" target="_blank">Ver projeto</a>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Sessão: Back-end -->
-    <section id="backend" class="sessao">
-      <h2 class="sessao-titulo">Projetos Back-end</h2>
-      <div class="cards">
-        <div class="card" data-date="Janeiro 2024">
-          <h3>API de Usuários</h3>
-          <p>CRUD completo com Spring Boot.</p>
-          <a href="#" target="_blank">Ver projeto</a>
-        </div>
-        <div class="card" data-date="Dezembro 2023">
-          <h3>Sistema de Login</h3>
-          <p>Autenticação com JWT.</p>
-          <a href="#" target="_blank">Ver projeto</a>
+          <button (click)="abrirDetalhes('clima-app')">Ver detalhes</button>
         </div>
       </div>
     </section>
 
-    <!-- Sessão: Jogos -->
+    <!-- Jogos -->
     <section id="jogos" class="sessao">
       <h2 class="sessao-titulo">Projetos de Jogos</h2>
       <div class="cards">
-        <div class="card" data-date="Outubro 2023">
+        <div class="card" data-date="Outubro 2023" data-projeto="jogo-da-velha">
           <h3>Jogo da Velha</h3>
           <p>Feito em Java com Swing.</p>
-          <a href="#" target="_blank">Ver projeto</a>
+          <button (click)="abrirDetalhes('jogo-da-velha')">Ver detalhes</button>
         </div>
-        <div class="card" data-date="Setembro 2023">
+        <div class="card" data-date="Setembro 2023" data-projeto="pong">
           <h3>Pong</h3>
           <p>Jogo criado com Processing.</p>
-          <a href="#" target="_blank">Ver projeto</a>
+          <button (click)="abrirDetalhes('pong')">Ver detalhes</button>
         </div>
       </div>
     </section>
+
+    <!-- Back-end -->
+    <section id="backend" class="sessao">
+      <h2 class="sessao-titulo">Projetos Back-end</h2>
+      <div class="cards">
+        <div class="card" data-date="Janeiro 2024" data-projeto="api-usuarios">
+          <h3>API de Usuários</h3>
+          <p>CRUD completo com Spring Boot.</p>
+          <button (click)="abrirDetalhes('api-usuarios')">Ver detalhes</button>
+        </div>
+        <div class="card" data-date="Dezembro 2023" data-projeto="sistema-login">
+          <h3>Sistema de Login</h3>
+          <p>Autenticação com JWT.</p>
+          <button (click)="abrirDetalhes('sistema-login')">Ver detalhes</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal de Detalhes -->
+  <div class="detalhes-overlay" *ngIf="projetoSelecionado">
+    <div class="detalhes-conteudo">
+      <button class="fechar" (click)="fecharDetalhes()" aria-label="Fechar">✖</button>
+
+      <ng-container [ngSwitch]="projetoSelecionado">
+        <div *ngSwitchCase="'portfolio-angular'">
+          <h3>Portfólio Angular</h3>
+          <p>Site pessoal feito em Angular, com foco em responsividade, animações e boas práticas de UX/UI.</p>
+        </div>
+
+        <div *ngSwitchCase="'clima-app'">
+          <h3>Clima App</h3>
+          <p>Aplicativo que consome API de clima para exibir a previsão meteorológica.</p>
+        </div>
+
+        <div *ngSwitchCase="'jogo-da-velha'">
+          <h3>Jogo da Velha</h3>
+          <p>Projeto feito em Java usando a biblioteca Swing para a interface gráfica.</p>
+        </div>
+
+        <div *ngSwitchCase="'pong'">
+          <h3>Pong</h3>
+          <p>Jogo clássico recriado com Processing, com foco em física básica e colisões.</p>
+        </div>
+
+        <div *ngSwitchCase="'api-usuarios'">
+          <h3>API de Usuários</h3>
+          <p>API REST feita em Spring Boot com JWT e MySQL, incluindo autenticação e CRUD completo.</p>
+        </div>
+
+        <div *ngSwitchCase="'sistema-login'">
+          <h3>Sistema de Login</h3>
+          <p>Backend com Spring Security, JWT e validação de autenticação para usuários.</p>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </section>

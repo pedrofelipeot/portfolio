@@ -19,7 +19,7 @@ export class ExperienciasComponent implements AfterViewInit, OnDestroy {
       THREE: THREE,
       color: 0x00b7ff,
       backgroundColor: 0x01a1a2e,
-      size: 1.2
+      size: 1.5
     });
 
     ScrollReveal().reveal('.fade-in-up', {

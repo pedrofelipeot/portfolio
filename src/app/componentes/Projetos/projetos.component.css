@@ -89,6 +89,57 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   margin: auto;
+
+}
+
+
+/* Efeito de hover com imagem de fundo */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.card:hover::after {
+  opacity: 0.4;
+}
+
+/* Exemplo de imagens de fundo por projeto */
+.card[data-projeto="portfolio-angular"]::after {
+  background-image: url('/assets/exemplo.png');
+}
+
+.card[data-projeto="clima-app"]::after {
+  background-image: url('/assets/exemplo.png');
+}
+
+.card[data-projeto="jogo-da-velha"]::after {
+  background-image: url('/assets/exemplo.png');
+}
+
+.card[data-projeto="pong"]::after {
+  background-image: url('/assets/exemplo.png');
+}
+
+.card[data-projeto="api-usuarios"]::after {
+  background-image: url('/assets/exemplo.png');
+}
+
+.card[data-projeto="sistema-login"]::after {
+  background-image: url('/assets/exemplo.png');
+}
+
+.card h3,
+.card p,
+.card a {
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover {
@@ -123,7 +174,7 @@
 .card::before {
   content: attr(data-date);
   position: absolute;
-  top: -20px;
+  top: -20px; /* Agora vai ficar bem acima do círculo */
   left: 50%;
   transform: translateX(-50%);
   background: #7d00ff;
@@ -132,7 +183,55 @@
   font-size: 0.75rem;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  z-index: 2;
 }
+
+
+
+/* -------------------- Detalhes Overlay -------------------- */
+.detalhes-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.detalhes-conteudo {
+  background: #1c1c2c;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.detalhes-conteudo h3 {
+  margin-top: 0;
+  color: #00b7ff;
+}
+
+.detalhes-conteudo p {
+  margin-top: 10px;
+}
+
+.detalhes-conteudo .fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 
 /* -------------------- Responsivo -------------------- */
 @media (max-width: 500px) {
