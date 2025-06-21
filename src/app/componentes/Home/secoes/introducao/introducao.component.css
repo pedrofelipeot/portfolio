@@ -25,6 +25,7 @@
     font-family: "Krona One", sans-serif;
     font-size: 1.2rem; /* 19.2px */
     line-height: 1.6;
+    max-width: 800px;
     color: #dcdcdc;
     margin: 0.5rem 0;
     opacity: 0;

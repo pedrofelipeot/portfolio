@@ -5,7 +5,6 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 5rem 20px 40px;
- 
 }
 
 /* -------------------- Título principal -------------------- */
@@ -87,11 +86,10 @@
   color: white;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin: auto;
-
+  overflow: hidden;
 }
-
 
 /* Efeito de hover com imagem de fundo */
 .card::after {
@@ -110,43 +108,44 @@
   opacity: 0.4;
 }
 
-/* Exemplo de imagens de fundo por projeto */
-.card[data-projeto="portfolio-angular"]::after {
-  background-image: url('/assets/exemplo.png');
-}
+/* Imagem de fundo por projeto */
+.card[data-projeto="portfolio-angular"]::after { background-image: url('/assets/exemplo.png'); }
+.card[data-projeto="clima-app"]::after { background-image: url('/assets/exemplo.png'); }
+.card[data-projeto="jogo-da-velha"]::after { background-image: url('/assets/exemplo.png'); }
+.card[data-projeto="pong"]::after { background-image: url('/assets/exemplo.png'); }
+.card[data-projeto="api-usuarios"]::after { background-image: url('/assets/exemplo.png'); }
+.card[data-projeto="sistema-login"]::after { background-image: url('/assets/exemplo.png'); }
 
-.card[data-projeto="clima-app"]::after {
-  background-image: url('/assets/exemplo.png');
-}
-
-.card[data-projeto="jogo-da-velha"]::after {
-  background-image: url('/assets/exemplo.png');
-}
-
-.card[data-projeto="pong"]::after {
-  background-image: url('/assets/exemplo.png');
-}
-
-.card[data-projeto="api-usuarios"]::after {
-  background-image: url('/assets/exemplo.png');
-}
-
-.card[data-projeto="sistema-login"]::after {
-  background-image: url('/assets/exemplo.png');
-}
-
-.card h3,
-.card p,
-.card a {
+.card h3, .card p, .card a, .card button {
   position: relative;
   z-index: 2;
 }
 
+/* Aumentar mais o círculo no hover */
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  transform: scale(1.20);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
 }
 
+/* Melhor destaque nos textos ao hover com imagem */
+.card:hover h3,
+.card:hover p,
+.card:hover a,
+.card:hover button {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+}
+
+.card:hover p,
+.card:hover h3 {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Estilo padrão dos textos */
 .card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -157,36 +156,40 @@
   color: #ccc;
 }
 
-.card a {
-  margin-top: 8px;
-  color: #69c0ff;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.2s;
+/* -------------------- Botão de Ver Detalhes -------------------- */
+.card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: linear-gradient(45deg, #00bfff, #0080ff);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-.card a:hover {
-  text-decoration: underline;
-  color: #96d4ff;
+.card button:hover {
+  background: linear-gradient(45deg, #1e90ff, #00bfff);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
 }
 
 /* -------------------- Data no topo dos cards -------------------- */
 .card::before {
   content: attr(data-date);
   position: absolute;
-  top: -20px; /* Agora vai ficar bem acima do círculo */
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   background: #7d00ff;
   color: white;
-  padding: 4px 10px;
-  font-size: 0.75rem;
-  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 14px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  z-index: 2;
+  z-index: 3;
 }
-
-
 
 /* -------------------- Detalhes Overlay -------------------- */
 .detalhes-overlay {
@@ -232,7 +235,6 @@
   cursor: pointer;
 }
 
-
 /* -------------------- Responsivo -------------------- */
 @media (max-width: 500px) {
   .card {
@@ -244,5 +246,11 @@
   .menu a {
     padding: 10px;
     font-size: 0.9rem;
+  }
+
+  .card::before {
+    top: -25px;
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
 }

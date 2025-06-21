@@ -1,34 +1,56 @@
 <section class="timeline-wrapper">
   <div class="timeline-section">
-    <h2><span class="titulo-azul">Sua</span> <span class="titulo-branco">Jornada</span></h2>
+    <h2><span class="titulo-azul">Minha</span> <span class="titulo-branco">Jornada</span></h2>
 
     <div class="timeline-item">
       <button class="timeline-toggle" (click)="alternar(0)">
-        {{ abertos[0] ? '▼' : '▶' }} 2023 — Início da jornada
+        {{ abertos[0] ? '▼' : '▶' }} 2022 — Início da jornada
       </button>
       <div class="timeline-content" *ngIf="abertos[0]">
-        <p>📘 Curso Java (CEAP)</p>
-        <p>🎓 Início da faculdade (Uninassau)</p>
+        <p>Primeiro contato com programação.</p>
+        <p>Aprendizado de lógica de programação utilizando Java.</p>
+        <p>Introdução aos conceitos de Programação Orientada a Objetos (POO) com Java.</p>
+        <p>Aprovado no vestibular para Ciência da Computação (PROUNI).</p>
       </div>
     </div>
 
     <div class="timeline-item">
       <button class="timeline-toggle" (click)="alternar(1)">
-        {{ abertos[1] ? '▼' : '▶' }} 2024 — Projetos práticos
+        {{ abertos[1] ? '▼' : '▶' }} 2023 — Aprimorando a base técnica
       </button>
       <div class="timeline-content" *ngIf="abertos[1]">
-        <p>💻 Projeto Node.js</p>
-        <p>🌐 Projeto Angular (Portfólio)</p>
+        <p>Início no desenvolvimento web.</p>
+        <p>Estudo de estruturas de dados utilizando Java.</p>
+        <p>Primeiro contato com metodologias ágeis e trabalho em equipe.</p>
+        <p>Introdução a bancos de dados relacionais.</p>
+        <p>Participação em atividade de extensão: palestra em uma ONG sobre como a tecnologia pode ajudar no dia a dia da organização.</p>
       </div>
     </div>
 
     <div class="timeline-item">
       <button class="timeline-toggle" (click)="alternar(2)">
-        {{ abertos[2] ? '▼' : '▶' }} 2025 — Aprofundamento
+        {{ abertos[2] ? '▼' : '▶' }} 2024 — Expandindo conhecimentos
       </button>
       <div class="timeline-content" *ngIf="abertos[2]">
-        <p>🚀 Curso Java + Spring (Rocketseat)</p>
+        <p>Início do estudo de conceitos de UI/UX, entendendo a importância da experiência do usuário.</p>
+        <p>Primeiros aprendizados sobre arquitetura de software e organização de projetos.</p>
+        <p>Estudo dos fundamentos de redes de computadores e comunicação entre sistemas.</p>
+        <p>Palestra em uma escola, compartilhando como é a área de T.I e realizando dinâmicas interativas com os alunos.</p>
+        <p>Primeiro contato com frameworks de front-end e back-end.</p>
       </div>
+    </div>
+
+     <div class="timeline-item">
+      <button class="timeline-toggle" (click)="alternar(3)">
+        {{ abertos[3] ? '▼' : '▶' }} 2025 — Consolidação e novas perspectivas
+      </button>
+      <div class="timeline-content" *ngIf="abertos[3]">
+        <p>Primeiro contato com desenvolvimento mobile utilizando Ionic.</p>
+        <p>Desenvolvimento de jogos com Unity e Processing, explorando conceitos de lógica e física em jogos.</p>
+        <p>Estudo sobre design e criação de personagens para jogos digitais.</p>
+        <p>Aprendizado sobre engenharia de requisitos, compreendendo melhor o processo de levantamento e documentação de necessidades de software.</p>
+      </div>
+
     </div>
   </div>
 </section>

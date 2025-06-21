@@ -2,23 +2,45 @@
   padding: 60px 20px;
   text-align: center;
   background-color: #0F1520;
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.formacao-section h2 {
-  margin-bottom: 40px; /* você pode ajustar esse valor como preferir */
-  font-size: 2rem; /* opcional, melhora o destaque do título */
+
+/* Título Formação Acadêmica */
+.formacao-titulo {
+  font-size: 2.5rem;
+  color: #0055aa; /* Azul forte */
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
 }
+
+/* Título Certificados */
+.certificados-titulo {
+  font-size: 2rem;
+  color: #ffffff; /* Cinza claro */
+  border-bottom: 2px dashed #aaaaaa;
+  padding-bottom: 0.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-align: center; /* <-- centraliza o texto */
+}
+
+
 .formacao-container {
   max-width: 800px;
   margin: 0 auto;
+  text-align: left; /* Alinha o texto dos cards à esquerda */
 }
 
+/* Cards */
 .card {
-  background: white;
-  padding: 20px;
+  background: #1e1e2f;
+  padding: 20px 25px;
   margin-bottom: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #eee;
 }
 
 .full-width {
@@ -34,4 +56,33 @@
 .half-width {
   flex: 1;
   min-width: 250px;
+}
+
+/* Issuer (quem emite) */
+.issuer {
+  font-style: italic;
+  color: #a0a0a0;
+  margin-bottom: 1rem;
+}
+
+/* Área dos dados Ano e Carga Horária */
+.cert-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cert-year, .cert-hours {
+  background-color: #394867;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #cce7ff;
+  box-shadow: 0 2px 6px rgba(67, 140, 255, 0.5);
+  user-select: none;
+  font-size: 0.95rem;
+}
+
+.cert-year strong, .cert-hours strong {
+  color: #82c0ff;
 }
