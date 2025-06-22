@@ -14,6 +14,33 @@
 }
 
 
+.descricao ul {
+  list-style-type: none; /* Remove bolinhas padrão */
+  padding-left: 0;
+  margin: 10px 0 0 ; /* Dá um recuo para o espaço da bolinha */
+}
+
+.descricao ul li {
+  position: relative;
+  margin-bottom: 6px;
+  color: #ffffff; /* Cor do texto */
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 15px; /* Espaço para a bolinha */
+}
+
+.descricao ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;   /* tamanho da bolinha */
+  height: 8px;
+  background-color: #007BFF; /* azul (pode trocar a cor) */
+  border-radius: 50%; /* deixa circular */
+}
+
 
 .card.agrupador {
   background: #1a1a2e;
