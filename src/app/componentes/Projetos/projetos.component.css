@@ -59,12 +59,12 @@
 .sessao-titulo {
   font-size: 1.6rem;
   color: #fff;
-  margin-bottom: 25px;
+  margin-bottom: 60px;
   border-left: 5px solid #007BFF;
   padding-left: 15px;
 }
 
-/* -------------------- Layout dos cards redondos -------------------- */
+/* -------------------- Layout dos cards -------------------- */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -73,11 +73,12 @@
 }
 
 .card {
-  background: #2a2a40;
+  background: linear-gradient(145deg, #2c2c44, #1e1e33);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   padding: 30px;
   height: 240px;
-  width: 240px;
+  width: 260px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,10 +86,9 @@
   position: relative;
   color: white;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin: auto;
-  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Efeito de hover com imagem de fundo */
@@ -121,10 +121,10 @@
   z-index: 2;
 }
 
-/* Aumentar mais o círculo no hover */
+/* Sombra azul no hover */
 .card:hover {
-  transform: scale(1.20);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00bfffc7;
 }
 
 /* Melhor destaque nos textos ao hover com imagem */
@@ -145,15 +145,39 @@
   transition: all 0.3s ease;
 }
 
-/* Estilo padrão dos textos */
+/* Estilo padrão dos textos antes do hover */
 .card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .card p {
   font-size: 0.95rem;
-  color: #ccc;
+  color: #cccccc;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Borda interna com leve brilho fixo (antes do hover) */
+.card::before {
+  content: attr(data-date);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #7d00ff;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  z-index: 3;
+}
+
+.card::after,
+.card::before {
+  transition: all 0.4s ease;
 }
 
 /* -------------------- Botão de Ver Detalhes -------------------- */
@@ -173,22 +197,6 @@
   background: linear-gradient(45deg, #1e90ff, #00bfff);
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
-}
-
-/* -------------------- Data no topo dos cards -------------------- */
-.card::before {
-  content: attr(data-date);
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #7d00ff;
-  color: white;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  z-index: 3;
 }
 
 /* -------------------- Detalhes Overlay -------------------- */

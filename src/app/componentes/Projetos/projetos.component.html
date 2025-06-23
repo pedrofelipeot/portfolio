@@ -12,54 +12,65 @@
 
     <!-- Front-end -->
     <section id="frontend" class="sessao">
-      <h2 class="sessao-titulo">Projetos Front-end</h2>
-      <div class="cards">
-        <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
-          <h3>Portfólio Angular</h3>
-          <p>Site pessoal feito em Angular.</p>
-          <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Março 2024" data-projeto="clima-app">
-          <h3>Clima App</h3>
-          <p>Aplicativo de previsão do tempo com API.</p>
-          <button (click)="abrirDetalhes('clima-app')">Ver detalhes</button>
-        </div>
-      </div>
-    </section>
+  <h2 class="sessao-titulo">Projetos Front-end</h2>
+  <div class="cards">
+    <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
+      <h3>Portfólio Angular</h3>
+      <p>Site pessoal responsivo e moderno em Angular.</p>
+      <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Março 2024" data-projeto="clima-app">
+      <h3>Site para Barbearia</h3>
+      <p>Site estático elegante para barbearia local.</p>
+      <button (click)="abrirDetalhes('clima-app')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Janeiro 2024" data-projeto="api-usuarios">
+      <h3>Site de Receitas</h3>
+      <p>Receitas com consumo de API externa.</p>
+      <button (click)="abrirDetalhes('api-usuarios')">Ver detalhes</button>
+    </div>
+  </div>
+</section>
 
-    <!-- Jogos -->
-    <section id="jogos" class="sessao">
-      <h2 class="sessao-titulo">Projetos de Jogos</h2>
-      <div class="cards">
-        <div class="card" data-date="Outubro 2023" data-projeto="jogo-da-velha">
-          <h3>Jogo da Velha</h3>
-          <p>Feito em Java com Swing.</p>
-          <button (click)="abrirDetalhes('jogo-da-velha')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Setembro 2023" data-projeto="pong">
-          <h3>Pong</h3>
-          <p>Jogo criado com Processing.</p>
-          <button (click)="abrirDetalhes('pong')">Ver detalhes</button>
-        </div>
-      </div>
-    </section>
+<!-- Jogos -->
+<section id="jogos" class="sessao">
+  <h2 class="sessao-titulo">Projetos de Jogos</h2>
+  <div class="cards">
+    <div class="card" data-date="Outubro 2023" data-projeto="jogo-da-velha">
+      <h3>Jogos com Processing</h3>
+      <p>Jogos clássicos desenvolvidos em Processing.</p>
+      <button (click)="abrirDetalhes('jogo-da-velha')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Setembro 2023" data-projeto="pong">
+      <h3>Block Duel</h3>
+      <p>Jogo de blocos criado no Processing.</p>
+      <button (click)="abrirDetalhes('pong')">Ver detalhes</button>
+    </div>
+  </div>
+</section>
 
-    <!-- Back-end -->
-    <section id="backend" class="sessao">
-      <h2 class="sessao-titulo">Projetos Back-end</h2>
-      <div class="cards">
-        <div class="card" data-date="Janeiro 2024" data-projeto="api-usuarios">
-          <h3>API de Usuários</h3>
-          <p>CRUD completo com Spring Boot.</p>
-          <button (click)="abrirDetalhes('api-usuarios')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Dezembro 2023" data-projeto="sistema-login">
-          <h3>Sistema de Login</h3>
-          <p>Autenticação com JWT.</p>
-          <button (click)="abrirDetalhes('sistema-login')">Ver detalhes</button>
-        </div>
-      </div>
-    </section>
+<!-- Back-end -->
+<section id="backend" class="sessao">
+  <h2 class="sessao-titulo">Projetos Back-end</h2>
+  <div class="cards">
+    <div class="card" data-date="Janeiro 2024" data-projeto="webscraping-ans">
+      <h3>WebScraping ANS</h3>
+      <p>Extração de dados de PDFs usando Java e Python.</p>
+      <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Dezembro 2023" data-projeto="sistema-biblioteca">
+      <h3>Sistema Biblioteca</h3>
+      <p>Gerenciamento de empréstimos de livros.</p>
+      <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Dezembro 2023" data-projeto="gerenciamento-tarefas">
+      <h3>Gerenciamento de Tarefas</h3>
+      <p>API para organização de tarefas com Spring Boot.</p>
+      <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
+    </div>
+  </div>
+</section>
+
   </div>
 
   <!-- Modal de Detalhes -->

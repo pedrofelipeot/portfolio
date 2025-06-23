@@ -20,6 +20,7 @@ import { ContatosComponent } from './componentes/Home/secoes/contatos/contatos.c
 import { HabilidadesComponent } from './componentes/Habilidades/habilidades.component';
 import { ExperienciasComponent } from './componentes/Experiencias/experiencias.component';
 import { ProjetosComponent } from './componentes/Projetos/projetos.component';
+import { RodapeComponent } from './componentes/rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProjetosComponent } from './componentes/Projetos/projetos.component';
     ContatosComponent,
     HabilidadesComponent,
     ExperienciasComponent,
-    ProjetosComponent
+    ProjetosComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
