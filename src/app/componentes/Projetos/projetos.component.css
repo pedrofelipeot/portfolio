@@ -89,6 +89,7 @@
   margin: auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border 0.4s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden; /* ← ESSA LINHA RESOLVE */
 }
 
 /* Efeito de hover com imagem de fundo */
@@ -125,6 +126,7 @@
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px #00bfffc7;
+  
 }
 
 /* Melhor destaque nos textos ao hover com imagem */
@@ -147,7 +149,7 @@
 
 /* Estilo padrão dos textos antes do hover */
 .card h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
@@ -199,6 +201,8 @@
   box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
 }
 
+
+
 /* -------------------- Detalhes Overlay -------------------- */
 .detalhes-overlay {
   position: fixed;
@@ -214,14 +218,18 @@
 
 .detalhes-conteudo {
   background: #1c1c2c;
+  overflow-y: auto;
   color: white;
   padding: 30px;
+  margin-top: 75px;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 75vw;
   width: 90%;
+  max-height: 85vh; /* ← Limita a altura do conteúdo ao tamanho da tela */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   position: relative;
 }
+
 
 .detalhes-conteudo h3 {
   margin-top: 0;
@@ -233,15 +241,70 @@
 }
 
 .detalhes-conteudo .fechar {
-  position: absolute;
+   position: sticky;     /* ← Fixa o botão dentro do modal */
   top: 10px;
   right: 15px;
-  background: transparent;
+  background-color: #00bfff;   /* Cor de fundo destacada */
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
+  z-index: 999;
+  padding: 6px 12px;
+  border-radius: 50%;           /* Botão redondo */
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);  /* Sombra azul clara */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.detalhes-conteudo .fechar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 191, 255, 0.7);  /* Mais destaque no hover */
+}
+.modal-conteudo {
+  color: #eaeaea;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.modal-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00c0ff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-bloco {
+  margin-bottom: 1.5rem;
+}
+
+.modal-bloco h4 {
+  font-size: 1.1rem;
+  color: #00c0ff;
+  background-color: #0F1520;
+  margin-bottom: 0.4rem;
+  border-left: 4px solid #00c0ff;
+  padding-left: 0.5rem;
+}
+
+.modal-bloco ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.modal-bloco a {
+  color: #00c0ff;
+  text-decoration: underline;
+}
+
+.modal-bloco a:hover {
+  color: #ffffff;
+}
+
 
 /* -------------------- Responsivo -------------------- */
 @media (max-width: 500px) {

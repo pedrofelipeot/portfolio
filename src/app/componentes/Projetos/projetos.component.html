@@ -12,64 +12,64 @@
 
     <!-- Front-end -->
     <section id="frontend" class="sessao">
-  <h2 class="sessao-titulo">Projetos Front-end</h2>
-  <div class="cards">
-    <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
-      <h3>Portfólio Angular</h3>
-      <p>Site pessoal responsivo e moderno em Angular.</p>
-      <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Março 2024" data-projeto="clima-app">
-      <h3>Site para Barbearia</h3>
-      <p>Site estático elegante para barbearia local.</p>
-      <button (click)="abrirDetalhes('clima-app')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Janeiro 2024" data-projeto="api-usuarios">
-      <h3>Site de Receitas</h3>
-      <p>Receitas com consumo de API externa.</p>
-      <button (click)="abrirDetalhes('api-usuarios')">Ver detalhes</button>
-    </div>
-  </div>
-</section>
+      <h2 class="sessao-titulo">Projetos Front-end</h2>
+      <div class="cards">
+        <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
+          <h3>Portfólio Angular</h3>
+          <p>Site pessoal responsivo e moderno em Angular.</p>
+          <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
+        </div>
+        <div class="card" data-date="Março 2024" data-projeto="clima-app">
+          <h3>Site para Barbearia</h3>
+          <p>Site estático elegante para barbearia local.</p>
+          <button (click)="abrirDetalhes('site-barbearia')">Ver detalhes</button>
+        </div>
+        <div class="card" data-date="Janeiro 2024" data-projeto="api-usuarios">
+          <h3>Site de Receitas</h3>
+          <p>Receitas com consumo de API externa.</p>
+          <button (click)="abrirDetalhes('sites-receitas')">Ver detalhes</button>
+        </div>
+      </div>
+    </section>
 
-<!-- Jogos -->
-<section id="jogos" class="sessao">
-  <h2 class="sessao-titulo">Projetos de Jogos</h2>
-  <div class="cards">
-    <div class="card" data-date="Outubro 2023" data-projeto="jogo-da-velha">
-      <h3>Jogos com Processing</h3>
-      <p>Jogos clássicos desenvolvidos em Processing.</p>
-      <button (click)="abrirDetalhes('jogo-da-velha')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Setembro 2023" data-projeto="pong">
-      <h3>Block Duel</h3>
-      <p>Jogo de blocos criado no Processing.</p>
-      <button (click)="abrirDetalhes('pong')">Ver detalhes</button>
-    </div>
-  </div>
-</section>
+    <!-- Jogos -->
+    <section id="jogos" class="sessao">
+      <h2 class="sessao-titulo">Projetos de Jogos</h2>
+      <div class="cards">
+        <div class="card" data-date="Outubro 2023" data-projeto="jogo-da-velha">
+          <h3>Jogos com Processing</h3>
+          <p>Jogos clássicos desenvolvidos em Processing.</p>
+          <button (click)="abrirDetalhes('classicos-processing')">Ver detalhes</button>
+        </div>
+        <div class="card" data-date="Setembro 2023" data-projeto="pong">
+          <h3>Block Duel</h3>
+          <p>Jogo de blocos criado no Processing.</p>
+          <button (click)="abrirDetalhes('block-duel')">Ver detalhes</button>
+        </div>
+      </div>
+    </section>
 
-<!-- Back-end -->
-<section id="backend" class="sessao">
-  <h2 class="sessao-titulo">Projetos Back-end</h2>
-  <div class="cards">
-    <div class="card" data-date="Janeiro 2024" data-projeto="webscraping-ans">
-      <h3>WebScraping ANS</h3>
-      <p>Extração de dados de PDFs usando Java e Python.</p>
-      <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Dezembro 2023" data-projeto="sistema-biblioteca">
-      <h3>Sistema Biblioteca</h3>
-      <p>Gerenciamento de empréstimos de livros.</p>
-      <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Dezembro 2023" data-projeto="gerenciamento-tarefas">
-      <h3>Gerenciamento de Tarefas</h3>
-      <p>API para organização de tarefas com Spring Boot.</p>
-      <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
-    </div>
-  </div>
-</section>
+    <!-- Back-end -->
+    <section id="backend" class="sessao">
+      <h2 class="sessao-titulo">Projetos Back-end</h2>
+      <div class="cards">
+        <div class="card" data-date="Janeiro 2024" data-projeto="webscraping-ans">
+          <h3>WebScraping ANS</h3>
+          <p>Extração de dados de PDFs usando Java e Python.</p>
+          <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
+        </div>
+        <div class="card" data-date="Dezembro 2023" data-projeto="sistema-biblioteca">
+          <h3>Sistema Biblioteca</h3>
+          <p>Gerenciamento de empréstimos de livros.</p>
+          <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
+        </div>
+        <div class="card" data-date="Dezembro 2023" data-projeto="gerenciamento-tarefas">
+          <h3>Gerenciamento de Tarefas</h3>
+          <p>API para organização de tarefas com Spring Boot.</p>
+          <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
+        </div>
+      </div>
+    </section>
 
   </div>
 
@@ -79,35 +79,324 @@
       <button class="fechar" (click)="fecharDetalhes()" aria-label="Fechar">✖</button>
 
       <ng-container [ngSwitch]="projetoSelecionado">
-        <div *ngSwitchCase="'portfolio-angular'">
-          <h3>Portfólio Angular</h3>
-          <p>Site pessoal feito em Angular, com foco em responsividade, animações e boas práticas de UX/UI.</p>
+        <div *ngSwitchCase="'portfolio-angular'" class="modal-conteudo">
+          <h3 class="modal-titulo">Portfólio Angular</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Site pessoal desenvolvido com Angular para apresentar minha trajetória, habilidades e projetos. Visual
+              limpo, navegação fluida e experiência otimizada para todos os dispositivos.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>Angular • TypeScript • HTML5 • SCSS • Tailwind CSS • Git • GitHub Pages</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Layout responsivo e mobile-first</li>
+              <li>Animações leves e transições suaves</li>
+              <li>Cards interativos com modais</li>
+              <li>Navegação por âncoras</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Desafio técnico</h4>
+            <p>Equilibrar animações e performance. A solução foi usar Tailwind com animações personalizadas e foco em
+              carregamento otimizado.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Em produção e em evolução contínua.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/portfolio-angular" target="_blank">GitHub</a></li>
+              <li><a href="https://pedrofelipeot.github.io/portfolio-angular" target="_blank">Site online</a></li>
+            </ul>
+          </section>
         </div>
 
-        <div *ngSwitchCase="'clima-app'">
-          <h3>Clima App</h3>
-          <p>Aplicativo que consome API de clima para exibir a previsão meteorológica.</p>
+
+
+
+        <div *ngSwitchCase="'site-barbearia'" class="modal-conteudo">
+          <h3 class="modal-titulo">Site para Barbearia</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Um site estático institucional desenvolvido para uma barbearia local, com foco em visual elegante e
+              presença digital.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>HTML • CSS • JavaScript</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Layout limpo e moderno</li>
+              <li>Seções para serviços, horários e localização</li>
+              <li>Totalmente responsivo</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Protótipo concluído</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/site-barbearia" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
         </div>
 
-        <div *ngSwitchCase="'jogo-da-velha'">
-          <h3>Jogo da Velha</h3>
-          <p>Projeto feito em Java usando a biblioteca Swing para a interface gráfica.</p>
+
+        <div *ngSwitchCase="'sites-receitas'" class="modal-conteudo">
+          <h3 class="modal-titulo">Site de Receitas</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Site de receitas culinárias com dados consumidos de uma API externa, com foco em usabilidade e
+              praticidade para o usuário.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>HTML • CSS • JavaScript • API pública de receitas</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Busca de receitas por ingrediente</li>
+              <li>Exibição de imagens, ingredientes e instruções</li>
+              <li>Design responsivo</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Projeto finalizado com integração funcional</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/site-receitas" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
         </div>
 
-        <div *ngSwitchCase="'pong'">
-          <h3>Pong</h3>
-          <p>Jogo clássico recriado com Processing, com foco em física básica e colisões.</p>
+        <div *ngSwitchCase="'classicos-processing'" class="modal-conteudo">
+          <h3 class="modal-titulo">Jogos com Processing</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Coletânea de jogos clássicos desenvolvidos com Java usando a biblioteca Processing.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>Java • Processing</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Jogo da Velha</li>
+              <li>Jogo da Forca</li>
+              <li>Jogo da Memória</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Desafio técnico</h4>
+            <p>Trabalhar com lógica de jogo em uma biblioteca gráfica simples e implementar interatividade.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Projetos concluídos</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/jogos-processing" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
         </div>
 
-        <div *ngSwitchCase="'api-usuarios'">
-          <h3>API de Usuários</h3>
-          <p>API REST feita em Spring Boot com JWT e MySQL, incluindo autenticação e CRUD completo.</p>
+
+        <div *ngSwitchCase="'block-duel'" class="modal-conteudo">
+          <h3 class="modal-titulo">Block Duel</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Jogo inspirado em Tricky Towers desenvolvido com Processing, com dois jogadores locais disputando espaço
+              com blocos que caem.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>Java • Processing • Lógica de colisão</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Multiplayer local</li>
+              <li>Física básica dos blocos</li>
+              <li>Detecção de vitória por altura</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Desafio técnico</h4>
+            <p>Implementar controle simultâneo de dois jogadores com movimentação independente.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Protótipo jogável</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/block-duel" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
         </div>
 
-        <div *ngSwitchCase="'sistema-login'">
-          <h3>Sistema de Login</h3>
-          <p>Backend com Spring Security, JWT e validação de autenticação para usuários.</p>
+
+        <div *ngSwitchCase="'webscraping-ans'" class="modal-conteudo">
+          <h3 class="modal-titulo">WebScraping ANS</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Ferramenta para extração automatizada de dados de arquivos PDF da ANS (Agência Nacional de Saúde),
+              estruturando os dados em formato utilizável.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>Java • Python • Apache PDFBox • Pandas</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Leitura e varredura de PDFs</li>
+              <li>Extração e formatação dos dados</li>
+              <li>Geração de planilhas para análise</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Desafio técnico</h4>
+            <p>Lidar com estrutura inconsistente dos PDFs e padronizar os dados para uso posterior.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Ferramenta funcional</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/webscraping-ans" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
         </div>
+        <div *ngSwitchCase="'sistema-biblioteca'" class="modal-conteudo">
+          <h3 class="modal-titulo">Sistema Biblioteca</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>Aplicação web para gerenciamento de bibliotecas, permitindo cadastro e empréstimo de livros.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>Java • Spring Boot • MySQL • Thymeleaf</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>Cadastro de livros e usuários</li>
+              <li>Controle de empréstimos e devoluções</li>
+              <li>Listagem e filtros por categoria</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>Projeto completo e funcional</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/sistema-biblioteca" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
+        </div>
+        <div *ngSwitchCase="'gerenciamento-tarefas'" class="modal-conteudo">
+          <h3 class="modal-titulo">Gerenciamento de Tarefas</h3>
+
+          <section class="modal-bloco">
+            <h4>O que é?</h4>
+            <p>API RESTful para gerenciamento de tarefas, permitindo criação, listagem, atualização e exclusão de
+              atividades.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Stack utilizada</h4>
+            <p>Java • Spring Boot • JPA • MySQL • Swagger</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Destaques</h4>
+            <ul>
+              <li>CRUD completo via endpoints REST</li>
+              <li>Documentação com Swagger</li>
+              <li>Validações e tratamento de exceções</li>
+            </ul>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Desafio técnico</h4>
+            <p>Padronizar mensagens de erro e estrutura de resposta para facilitar a integração com o front-end.</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Status</h4>
+            <p>API concluída e pronta para integração</p>
+          </section>
+
+          <section class="modal-bloco">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="https://github.com/pedrofelipeot/gerenciamento-tarefas" target="_blank">GitHub</a></li>
+            </ul>
+          </section>
+        </div>
+
       </ng-container>
     </div>
   </div>
