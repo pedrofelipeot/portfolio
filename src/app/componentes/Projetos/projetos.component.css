@@ -262,7 +262,9 @@
   box-shadow: 0 6px 18px rgba(0, 191, 255, 0.7);  /* Mais destaque no hover */
 }
 .modal-conteudo {
+  width: 62vw;
   color: #eaeaea;
+  margin: auto;
   font-size: 1rem;
   line-height: 1.6;
   padding: 1rem;
