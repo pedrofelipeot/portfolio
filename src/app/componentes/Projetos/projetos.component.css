@@ -77,11 +77,11 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   padding: 30px;
-  height: 240px;
+  height: 260px; /* ou outro valor fixo ou min-height */
   width: 260px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Começa de cima */
   align-items: center;
   position: relative;
   color: white;
@@ -89,7 +89,16 @@
   margin: auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border 0.4s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    overflow: hidden; /* ← ESSA LINHA RESOLVE */
+  overflow: hidden; /* ← ESSA LINHA RESOLVE */
+}
+
+.card-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Efeito de hover com imagem de fundo */
@@ -110,12 +119,38 @@
 }
 
 /* Imagem de fundo por projeto */
-.card[data-projeto="portfolio-angular"]::after { background-image: url('/assets/exemplo.png'); }
-.card[data-projeto="clima-app"]::after { background-image: url('/assets/exemplo.png'); }
-.card[data-projeto="jogo-da-velha"]::after { background-image: url('/assets/exemplo.png'); }
-.card[data-projeto="pong"]::after { background-image: url('/assets/exemplo.png'); }
-.card[data-projeto="api-usuarios"]::after { background-image: url('/assets/exemplo.png'); }
-.card[data-projeto="sistema-login"]::after { background-image: url('/assets/exemplo.png'); }
+.card[data-projeto="portfolio-angular"]::after {
+  background-image: url('/assets/portfolio.png');
+}
+
+.card[data-projeto="site-barbearia"]::after {
+  background-image: url('/assets/barbearia.png');
+}
+
+.card[data-projeto="site-receitas"]::after {
+  background-image: url('/assets/receitas.png');
+}
+
+.card[data-projeto="classicos-processing"]::after {
+  background-image: url('/assets/processing-classico.png');
+}
+
+.card[data-projeto="block-duel"]::after {
+  background-image: url('/assets/block-duel.png');
+}
+
+.card[data-projeto="webscraping-ans"]::after {
+  background-image: url('/assets/webscraping.png');
+}
+
+.card[data-projeto="sistema-biblioteca"]::after {
+  background-image: url('/assets/library.png');
+}
+
+.card[data-projeto="gerenciamento-tarefas"]::after {
+  background-image: url('/assets/to-do-list.png');
+}
+
 
 .card h3, .card p, .card a, .card button {
   position: relative;
@@ -184,7 +219,7 @@
 
 /* -------------------- Botão de Ver Detalhes -------------------- */
 .card button {
-  margin-top: 10px;
+  margin-top: auto;
   padding: 8px 16px;
   background: linear-gradient(45deg, #00bfff, #0080ff);
   color: white;

@@ -10,66 +10,85 @@
       <a [routerLink]="[]" fragment="backend">Back-end</a>
     </nav>
 
-    <!-- Front-end -->
-    <section id="frontend" class="sessao">
-      <h2 class="sessao-titulo">Projetos Front-end</h2>
-      <div class="cards">
-        <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
-          <h3>Portfólio Angular</h3>
-          <p>Site pessoal responsivo e moderno em Angular.</p>
-          <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Março 2024" data-projeto="clima-app">
-          <h3>Site para Barbearia</h3>
-          <p>Site estático elegante para barbearia local.</p>
-          <button (click)="abrirDetalhes('site-barbearia')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Janeiro 2024" data-projeto="api-usuarios">
-          <h3>Site de Receitas</h3>
-          <p>Receitas com consumo de API externa.</p>
-          <button (click)="abrirDetalhes('sites-receitas')">Ver detalhes</button>
-        </div>
+   <!-- Front-end -->
+<!-- Front-end -->
+<section id="frontend" class="sessao">
+  <h2 class="sessao-titulo">Projetos Front-end</h2>
+  <div class="cards">
+    <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
+      <div class="card-conteudo">
+        <h3>Portfólio Angular</h3>
+        <p>Site pessoal responsivo e moderno em Angular.</p>
       </div>
-    </section>
+      <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Março 2024" data-projeto="site-barbearia">
+      <div class="card-conteudo">
+        <h3>Site para Barbearia</h3>
+        <p>Site estático elegante para barbearia local.</p>
+      </div>
+      <button (click)="abrirDetalhes('site-barbearia')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Janeiro 2024" data-projeto="site-receitas">
+      <div class="card-conteudo">
+        <h3>Site de Receitas</h3>
+        <p>Receitas com consumo de API externa.</p>
+      </div>
+      <button (click)="abrirDetalhes('site-receitas')">Ver detalhes</button>
+    </div>
+  </div>
+</section>
 
-    <!-- Jogos -->
-    <section id="jogos" class="sessao">
-      <h2 class="sessao-titulo">Projetos de Jogos</h2>
-      <div class="cards">
-        <div class="card" data-date="Outubro 2023" data-projeto="jogo-da-velha">
-          <h3>Jogos com Processing</h3>
-          <p>Jogos clássicos desenvolvidos em Processing.</p>
-          <button (click)="abrirDetalhes('classicos-processing')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Setembro 2023" data-projeto="pong">
-          <h3>Block Duel</h3>
-          <p>Jogo de blocos criado no Processing.</p>
-          <button (click)="abrirDetalhes('block-duel')">Ver detalhes</button>
-        </div>
+<!-- Jogos -->
+<section id="jogos" class="sessao">
+  <h2 class="sessao-titulo">Projetos de Jogos</h2>
+  <div class="cards">
+    <div class="card" data-date="Outubro 2023" data-projeto="classicos-processing">
+      <div class="card-conteudo">
+        <h3>Jogos com Processing</h3>
+        <p>Jogos clássicos desenvolvidos em Processing.</p>
       </div>
-    </section>
+      <button (click)="abrirDetalhes('classicos-processing')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Setembro 2023" data-projeto="block-duel">
+      <div class="card-conteudo">
+        <h3>Block Duel</h3>
+        <p>Jogo de blocos criado no Processing.</p>
+      </div>
+      <button (click)="abrirDetalhes('block-duel')">Ver detalhes</button>
+    </div>
+  </div>
+</section>
 
-    <!-- Back-end -->
-    <section id="backend" class="sessao">
-      <h2 class="sessao-titulo">Projetos Back-end</h2>
-      <div class="cards">
-        <div class="card" data-date="Janeiro 2024" data-projeto="webscraping-ans">
-          <h3>WebScraping ANS</h3>
-          <p>Extração de dados de PDFs usando Java e Python.</p>
-          <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Dezembro 2023" data-projeto="sistema-biblioteca">
-          <h3>Sistema Biblioteca</h3>
-          <p>Gerenciamento de empréstimos de livros.</p>
-          <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
-        </div>
-        <div class="card" data-date="Dezembro 2023" data-projeto="gerenciamento-tarefas">
-          <h3>Gerenciamento de Tarefas</h3>
-          <p>API para organização de tarefas com Spring Boot.</p>
-          <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
-        </div>
+<!-- Back-end -->
+<section id="backend" class="sessao">
+  <h2 class="sessao-titulo">Projetos Back-end</h2>
+  <div class="cards">
+    <div class="card" data-date="Janeiro 2024" data-projeto="webscraping-ans">
+      <div class="card-conteudo">
+        <h3>WebScraping ANS</h3>
+        <p>Extração de dados de PDFs usando Java e Python.</p>
       </div>
-    </section>
+      <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Dezembro 2023" data-projeto="sistema-biblioteca">
+      <div class="card-conteudo">
+        <h3>Sistema Biblioteca</h3>
+        <p>Gerenciamento de empréstimos de livros.</p>
+      </div>
+      <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
+    </div>
+    <div class="card" data-date="Dezembro 2023" data-projeto="gerenciamento-tarefas">
+      <div class="card-conteudo">
+        <h3>Gerenciamento de Tarefas</h3>
+        <p>API para organização de tarefas com Spring Boot.</p>
+      </div>
+      <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
+    </div>
+  </div>
+</section>
+
+
 
   </div>
 
@@ -90,13 +109,13 @@
 
           <section class="modal-bloco">
             <h4>Stack utilizada</h4>
-            <p>Angular • TypeScript • HTML5 • SCSS • Tailwind CSS • Git • GitHub Pages</p>
+            <p>Angular • TypeScript • HTML5 • CSS • Git</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Destaques</h4>
             <ul>
-              <li>Layout responsivo e mobile-first</li>
+              <li>Layout responsivo</li>
               <li>Animações leves e transições suaves</li>
               <li>Cards interativos com modais</li>
               <li>Navegação por âncoras</li>
@@ -105,19 +124,13 @@
 
           <section class="modal-bloco">
             <h4>Desafio técnico</h4>
-            <p>Equilibrar animações e performance. A solução foi usar Tailwind com animações personalizadas e foco em
-              carregamento otimizado.</p>
-          </section>
-
-          <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Em produção e em evolução contínua.</p>
+            <p>Para criar um visual moderno sem comprometer a performance, utilizei animações leves com Vanta.js, garantindo uma experiência interativa e com carregamento otimizado.</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/portfolio-angular" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/portifolio" target="_blank">GitHub</a></li>
               <li><a href="https://pedrofelipeot.github.io/portfolio-angular" target="_blank">Site online</a></li>
             </ul>
           </section>
@@ -131,7 +144,7 @@
 
           <section class="modal-bloco">
             <h4>O que é?</h4>
-            <p>Um site estático institucional desenvolvido para uma barbearia local, com foco em visual elegante e
+            <p>Um site estático institucional desenvolvido para uma barbearia fictícia, com foco em visual elegante e
               presença digital.</p>
           </section>
 
@@ -144,26 +157,22 @@
             <h4>Destaques</h4>
             <ul>
               <li>Layout limpo e moderno</li>
-              <li>Seções para serviços, horários e localização</li>
+              <li>Seções para serviços, dicas de cortes e localização</li>
               <li>Totalmente responsivo</li>
             </ul>
           </section>
 
           <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Protótipo concluído</p>
-          </section>
-
-          <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/site-barbearia" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/Barbearia" target="_blank">GitHub</a></li>
+              <li><a href="https://pedrofelipeot.github.io/Barbearia/" target="_blank">Site online</a></li>
             </ul>
           </section>
         </div>
 
 
-        <div *ngSwitchCase="'sites-receitas'" class="modal-conteudo">
+        <div *ngSwitchCase="'site-receitas'" class="modal-conteudo">
           <h3 class="modal-titulo">Site de Receitas</h3>
 
           <section class="modal-bloco">
@@ -174,21 +183,16 @@
 
           <section class="modal-bloco">
             <h4>Stack utilizada</h4>
-            <p>HTML • CSS • JavaScript • API pública de receitas</p>
+            <p>HTML • CSS • JavaScript • Angular • TypeScript • TheMealDB</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Destaques</h4>
             <ul>
               <li>Busca de receitas por ingrediente</li>
+              <li>Buscar receitas por nome</li>
               <li>Exibição de imagens, ingredientes e instruções</li>
-              <li>Design responsivo</li>
             </ul>
-          </section>
-
-          <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Projeto finalizado com integração funcional</p>
           </section>
 
           <section class="modal-bloco">
@@ -218,6 +222,7 @@
               <li>Jogo da Velha</li>
               <li>Jogo da Forca</li>
               <li>Jogo da Memória</li>
+              <li>Pong</li>
             </ul>
           </section>
 
@@ -227,14 +232,9 @@
           </section>
 
           <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Projetos concluídos</p>
-          </section>
-
-          <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/jogos-processing" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/processing-games" target="_blank">GitHub</a></li>
             </ul>
           </section>
         </div>
@@ -251,13 +251,13 @@
 
           <section class="modal-bloco">
             <h4>Stack utilizada</h4>
-            <p>Java • Processing • Lógica de colisão</p>
+            <p>Java • Processing</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Destaques</h4>
             <ul>
-              <li>Multiplayer local</li>
+              <li>2 vs 2</li>
               <li>Física básica dos blocos</li>
               <li>Detecção de vitória por altura</li>
             </ul>
@@ -266,11 +266,6 @@
           <section class="modal-bloco">
             <h4>Desafio técnico</h4>
             <p>Implementar controle simultâneo de dois jogadores com movimentação independente.</p>
-          </section>
-
-          <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Protótipo jogável</p>
           </section>
 
           <section class="modal-bloco">
@@ -293,7 +288,7 @@
 
           <section class="modal-bloco">
             <h4>Stack utilizada</h4>
-            <p>Java • Python • Apache PDFBox • Pandas</p>
+            <p>Java • Python • Vue.js • MySQL • HTML • CSS</p>
           </section>
 
           <section class="modal-bloco">
@@ -311,14 +306,9 @@
           </section>
 
           <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Ferramenta funcional</p>
-          </section>
-
-          <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/webscraping-ans" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/WebScraping-ANS" target="_blank">GitHub</a></li>
             </ul>
           </section>
         </div>
@@ -332,7 +322,7 @@
 
           <section class="modal-bloco">
             <h4>Stack utilizada</h4>
-            <p>Java • Spring Boot • MySQL • Thymeleaf</p>
+            <p>Node.js • Express • MySQL • Insomnia</p>
           </section>
 
           <section class="modal-bloco">
@@ -340,19 +330,14 @@
             <ul>
               <li>Cadastro de livros e usuários</li>
               <li>Controle de empréstimos e devoluções</li>
-              <li>Listagem e filtros por categoria</li>
+              <li>Listagem dos livros</li>
             </ul>
-          </section>
-
-          <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>Projeto completo e funcional</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/sistema-biblioteca" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/LibraryApi" target="_blank">GitHub</a></li>
             </ul>
           </section>
         </div>
@@ -367,32 +352,27 @@
 
           <section class="modal-bloco">
             <h4>Stack utilizada</h4>
-            <p>Java • Spring Boot • JPA • MySQL • Swagger</p>
+            <p>Java • Spring Boot • JPA • MySQL</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Destaques</h4>
             <ul>
               <li>CRUD completo via endpoints REST</li>
-              <li>Documentação com Swagger</li>
+              <li>Autenticação e autorização de usuários</li>
               <li>Validações e tratamento de exceções</li>
             </ul>
           </section>
 
           <section class="modal-bloco">
             <h4>Desafio técnico</h4>
-            <p>Padronizar mensagens de erro e estrutura de resposta para facilitar a integração com o front-end.</p>
-          </section>
-
-          <section class="modal-bloco">
-            <h4>Status</h4>
-            <p>API concluída e pronta para integração</p>
+            <p>O desafio técnico foi implementar autenticação com JWT para garantir que apenas usuários autenticados pudessem acessar os endpoints</p>
           </section>
 
           <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/gerenciamento-tarefas" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/ToDoList" target="_blank">GitHub</a></li>
             </ul>
           </section>
         </div>
