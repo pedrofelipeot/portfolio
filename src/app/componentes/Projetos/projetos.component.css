@@ -236,7 +236,16 @@
   box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
 }
 
-
+.img-demonstração {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  margin: 1rem 0;
+  display: block;
+  object-fit: contain;
+}
 
 /* -------------------- Detalhes Overlay -------------------- */
 .detalhes-overlay {
