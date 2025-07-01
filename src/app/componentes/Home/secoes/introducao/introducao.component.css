@@ -106,3 +106,26 @@
   }
 }
 
+@media (max-width: 400px) {
+  .intro-container {
+    padding: 1rem 0.8rem;
+  }
+
+  .intro-text h1 {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .intro-text p {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+    text-align: justify;
+  }
+
+  .intro-img img {
+    max-width: 8.5rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+

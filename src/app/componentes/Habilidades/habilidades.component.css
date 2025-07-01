@@ -280,15 +280,96 @@
   }
 }
 
-/* Responsividade */
+/* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
   .cards-inline {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
   }
 
-  .card.agrupador {
-    margin: 1rem;
-    padding: 1rem;
+  .card.pequeno {
+    flex: 1 1 calc(50% - 1rem); /* dois cards por linha */
+    max-width: calc(50% - 1rem);
+    margin-bottom: 1rem;
   }
 }
+
+/* Responsividade para celulares muito pequenos */
+@media (max-width: 480px) {
+  .cards-inline {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .card.pequeno {
+    flex: 1 1 100%; /* um card por linha */
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cabecalho img {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+
+  .cabecalho h3 {
+    font-size: 1rem;
+  }
+
+  .descricao ul li {
+    font-size: 0.9rem;
+    padding-left: 12px;
+  }
+
+  /* Ajustes para linha do tempo */
+  .linha-tempo {
+    padding: 2rem 1.5rem;
+  }
+
+  .linha-tempo .timeline {
+    max-width: 100%;
+    padding-left: 1rem;
+    border-left-width: 2px;
+  }
+
+  .linha-tempo .ponto {
+    left: -1.2rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .linha-tempo .conteudo {
+    padding: 0.8rem;
+  }
+
+  .linha-tempo h2.linha-titulo {
+    font-size: 1.2rem;
+  }
+
+  .linha-tempo .etapa h3 {
+    font-size: 1rem;
+  }
+
+  .linha-tempo .etapa p {
+    font-size: 0.85rem;
+  }
+
+  .card.agrupador h2 {
+    font-size: 1.22rem;
+    margin: 2rem 0 1.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .card.agrupador h2:first-of-type {
+    margin-top: 5rem; /* só o primeiro título ganha mais espaço */
+    margin-bottom: 2rem;
+  }
+}
+
+
+

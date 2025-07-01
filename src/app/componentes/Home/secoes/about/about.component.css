@@ -124,3 +124,29 @@ section {
     padding: 1rem;
   }
 }
+
+@media (max-width: 400px) {
+  .conteudo h1 {
+    font-size: 1.2rem;
+  }
+
+  .conteudo p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .imagem img {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .geral {
+    padding: 0.8rem;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+}
