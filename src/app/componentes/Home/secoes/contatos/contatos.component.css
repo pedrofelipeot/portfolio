@@ -1,3 +1,4 @@
+/* ======= CONTATO - DESKTOP ======= */
 .contato-section {
   position: relative;
   padding: 60px 20px;
@@ -108,8 +109,7 @@
   z-index: 0;
 }
 
-/* ================= Responsividade ================= */
-
+/* ======= RESPONSIVIDADE ======= */
 @media (max-width: 768px) {
   .contato-box {
     padding: 30px 20px;
@@ -121,13 +121,7 @@
 
   .contato-meios {
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .contato-meios a {
-    justify-content: center;
-    padding: 10px;
-    font-size: 0.95rem;
+    gap: 12px;
   }
 
   .form-container input,
@@ -143,22 +137,35 @@
 }
 
 @media (max-width: 480px) {
-  .contato-box {
-    padding: 25px 15px;
+  .contato-meios {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .contato-box h2 {
-    font-size: 1.4rem;
+  .contato-meios a {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 0;
+    border-radius: 50%;
+    background-color: #0077ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
   }
 
-  .form-container input,
-  .form-container textarea {
-    padding: 10px;
-    font-size: 0.9rem;
+  .contato-meios a span {
+    display: none; /* remove o texto visualmente */
   }
 
-  .form-container button {
-    font-size: 0.95rem;
-    padding: 10px;
+  .contato-meios a .icones-contatos {
+    width: 24px;
+    height: 24px;
+    display: block;
+    filter: brightness(0) invert(1);
   }
 }
+

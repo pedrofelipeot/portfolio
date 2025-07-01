@@ -115,3 +115,64 @@
     transform: translateY(0);
   }
 }
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    padding: 7rem 15px;
+  }
+
+  .timeline-section {
+    padding: 30px 15px;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .timeline-toggle {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+
+  .timeline-content {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+    padding: 10px 14px 10px 12px;
+  }
+
+  .timeline-content p::before {
+    left: -16px;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .timeline-toggle {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  .timeline-content {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+    padding: 10px 12px 10px 10px;
+  }
+
+  .timeline-content p::before {
+    left: -14px;
+  }
+}

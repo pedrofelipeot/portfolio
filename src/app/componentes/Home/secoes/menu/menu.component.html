@@ -28,9 +28,10 @@
 
   <div #menuMobile class="mobile-menu">
     <ul>
-      <li class="nav-item"><a routerLink="/habilidades" class="nav-link">Habilidades</a></li>
-      <li class="nav-item"><a routerLink="/projetos" class="nav-link">Projetos</a></li>
-      <li class="nav-item"><a routerLink="/experiencias" class="nav-link">Experiência</a></li>
+      <li class="nav-item"><a routerLink="/" class="nav-link" (click)="fecharMenu()">Início</a></li>
+      <li class="nav-item"><a routerLink="/habilidades" class="nav-link" (click)="fecharMenu()">Habilidades</a></li>
+      <li class="nav-item"><a routerLink="/projetos" class="nav-link" (click)="fecharMenu()">Projetos</a></li>
+      <li class="nav-item"><a routerLink="/experiencias" class="nav-link" (click)="fecharMenu()">Experiência</a></li>
     </ul>
   </div>
 </header>

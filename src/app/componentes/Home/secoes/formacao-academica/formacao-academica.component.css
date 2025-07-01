@@ -9,7 +9,7 @@
 /* Título Formação Acadêmica */
 .formacao-titulo {
   font-size: 2.5rem;
-  color: #0055aa; /* Azul forte */
+  color: #0055aa;
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
 }
@@ -17,20 +17,20 @@
 /* Título Certificados */
 .certificados-titulo {
   font-size: 2rem;
-  color: #ffffff; /* Cinza claro */
+  color: #ffffff;
   border-bottom: 2px dashed #aaaaaa;
   padding-bottom: 0.2rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
   font-style: italic;
-  text-align: center; /* <-- centraliza o texto */
+  text-align: center;
 }
 
-
+/* Container principal */
 .formacao-container {
   max-width: 800px;
   margin: 0 auto;
-  text-align: left; /* Alinha o texto dos cards à esquerda */
+  text-align: left;
 }
 
 /* Cards */
@@ -47,12 +47,14 @@
   width: 100%;
 }
 
+/* Linha de cards lado a lado */
 .card-row {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
+/* Metade da largura (em telas maiores) */
 .half-width {
   flex: 1;
   min-width: 250px;
@@ -72,7 +74,8 @@
   flex-wrap: wrap;
 }
 
-.cert-year, .cert-hours {
+.cert-year,
+.cert-hours {
   background-color: #394867;
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
@@ -83,6 +86,60 @@
   font-size: 0.95rem;
 }
 
-.cert-year strong, .cert-hours strong {
+.cert-year strong,
+.cert-hours strong {
   color: #82c0ff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .formacao-titulo {
+    font-size: 2rem;
+  }
+
+  .certificados-titulo {
+    font-size: 1.6rem;
+  }
+
+  .formacao-container {
+    padding: 0 10px;
+  }
+
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cert-meta {
+    gap: 1rem;
+  }
+
+  .cert-year,
+  .cert-hours {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formacao-titulo {
+    font-size: 1.6rem;
+  }
+
+  .certificados-titulo {
+    font-size: 1.4rem;
+  }
+
+  .cert-year,
+  .cert-hours {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%;
+  }
 }

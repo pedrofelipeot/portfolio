@@ -21,4 +21,11 @@ export class MenuComponent {
       hamburger?.classList.add('open');
     }
   }
+  fecharMenu() {
+  const menuMobile = this.menuMobile.nativeElement;
+  const hamburger = document.querySelector('.hamburger');
+
+  menuMobile.classList.remove('open');
+  hamburger?.classList.remove('open');
+}
 }

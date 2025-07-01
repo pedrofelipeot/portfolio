@@ -1,81 +1,108 @@
 .intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: calc(100vh - 4.5rem); /* Altura da tela menos a altura do menu */
-    margin: 0 auto;
-    border-radius: 10px; /* Bordas arredondadas para suavizar o visual */
-    transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 4.5rem);
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 2rem 1rem;
 }
 
 .intro-text h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2.5rem; /* 40px */
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    opacity: 0;
-    transform: translateY(-20px); /* Faz o título aparecer de baixo para cima */
-    animation: fadeInUp 1s forwards; /* Animação para o título */
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards;
 }
 
 .intro-text p {
-    font-family: "Krona One", sans-serif;
-    font-size: 1.2rem; /* 19.2px */
-    line-height: 1.6;
-    max-width: 800px;
-    color: #dcdcdc;
-    margin: 0.5rem 0;
-    opacity: 0;
-    transform: translateY(20px); /* Faz o parágrafo aparecer de cima para baixo */
-    animation: fadeInUp 1.2s forwards; /* Animação para o parágrafo */
-    animation-delay: 0.5s; /* Atraso para dar ritmo ao efeito */
+  font-family: "Krona One", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  color: #dcdcdc;
+  margin: 0.5rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s forwards;
+  animation-delay: 0.5s;
 }
 
 .intro-img img {
-    max-width: 15.625rem; /* 250px em rem */
-    border-radius: 50%;
-    box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.3); /* 15px em rem */
-    transition: transform 0.3s ease;
-    transform: scale(0.9); /* Inicia com a imagem um pouco menor */
-    animation: scaleUp 1s forwards; /* Efeito de aumento da imagem */
+  max-width: 15.625rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  transform: scale(0.9);
+  animation: scaleUp 1s forwards;
 }
 
 .intro-img img:hover {
-    transform: scale(1.05); /* Efeito ao passar o mouse */
+  transform: scale(1.05);
 }
 
 /* Animações */
 @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scaleUp {
-    to {
-        transform: scale(1);
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
-/* Responsivo: lado a lado em telas grandes */
-@media (min-width: 48rem) { /* 768px em rem */
-    .intro-container {
-        flex-direction: row;
-        justify-content: center;
-        text-align: left;
-    }
+/* Telas maiores (layout lado a lado) */
+@media (min-width: 768px) {
+  .intro-container {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    height: calc(100vh - 4.5rem);
+    padding: 2rem 4rem;
+    gap: 2rem;
+  }
 
-    .intro-text {
-        max-width: 31.25rem; /* 500px em rem */
-    }
+  .intro-text {
+    max-width: 31.25rem; /* 500px */
+  }
 
-    .intro-img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .intro-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
+/* Telas pequenas (responsivo real) */
+@media (max-width: 480px) {
+  .intro-container {
+    flex-direction: column-reverse;
+    padding: 1.5rem 1rem;
+  }
+
+  .intro-text h1 {
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
+  }
+
+  .intro-text p {
+    text-align: justify;
+    font-size: 1.1rem;
+  }
+
+  .intro-img img {
+    max-width: 11rem;
+  }
+}
+

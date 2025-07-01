@@ -5,16 +5,21 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
-  background: #ececec; 
+  background: #ececec;
   overflow-x: hidden;
 }
-.conteudo-titulo{
+
+.conteudo-titulo {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
-.conteudo-texto{
+
+.conteudo-texto {
   margin-left: 60px;
 }
+
 .geral {
   display: flex;
   gap: 2.5rem;
@@ -24,7 +29,7 @@ section {
   background: white;
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .imagem img {
@@ -33,7 +38,7 @@ section {
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #dce3f0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* leve destaque */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .conteudo {
@@ -57,8 +62,16 @@ section {
   font-size: 1.05rem;
 }
 
-/* Responsividade */
+/* Responsivo para tablets e celulares */
 @media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .conteudo-texto {
+    margin-left: 0;
+  }
+
   .geral {
     flex-direction: column;
     align-items: center;
@@ -81,5 +94,33 @@ section {
   .imagem img {
     width: 12.5rem;
     height: 12.5rem;
+  }
+}
+
+/* Responsivo para telas muito pequenas (ex: celulares antigos) */
+@media (max-width: 480px) {
+  .conteudo h1 {
+    font-size: 1.4rem;
+  }
+
+  .conteudo p {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  .imagem img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .geral {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  section {
+    padding: 1rem;
   }
 }
