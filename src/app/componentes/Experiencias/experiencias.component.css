@@ -233,17 +233,189 @@ img{
   filter: brightness(1.4);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .titulo-principal {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 
   .experiencia-timeline {
-    border-left: 2px solid #00b7ff;
-    padding-left: 10px;
+    margin-left: 10px;
+    padding-left: 15px;
+    border-left-width: 2.5px;
+  }
+
+  .experiencia-bloco {
+    padding: 15px;
+    margin-bottom: 1.5rem;
   }
 
   .experiencia-bloco::before {
-    left: -22px;
+    width: 16px;
+    height: 16px;
+    left: -25px;
+    top: 20px;
+  }
+
+  .experiencia-bloco h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .experiencia-bloco ul li {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    padding-left: 18px;
+  }
+
+  .experiencia-bloco ul li::before {
+    left: 0;
+  }
+
+  .experiencia-bloco .imagem-experiencia img {
+    max-height: 140px;
+  }
+
+  .soft-skills-section {
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .soft-skills-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .soft-skills-grid {
+    gap: 12px;
+  }
+
+  .skill-card {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+    gap: 8px;
+  }
+
+  .skill-card img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .resumo-profissional,
+  .ferramentas-section {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px;
+  }
+
+  .resumo-profissional h3,
+  .ferramentas-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .ferramentas-grid {
+    gap: 10px;
+  }
+
+  .ferramentas-grid img {
+    width: 40px;
+    height: 40px;
   }
 }
+
+@media (max-width: 600px) {
+  .titulo-principal {
+    font-size: 1.6rem;
+  }
+
+  .experiencia-timeline {
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left-width: 2px;
+  }
+
+  .experiencia-bloco {
+    padding: 12px 10px;
+    margin-bottom: 1.2rem;
+  }
+
+  .experiencia-bloco::before {
+    width: 14px;
+    height: 14px;
+    left: -20px;
+    top: 18px;
+  }
+
+  .experiencia-bloco h3 {
+    font-size: 1.1rem;
+  }
+
+  .experiencia-bloco ul li {
+    text-align: justify;
+    font-size: 0.85rem;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 17px;
+  }
+
+  .experiencia-bloco .imagem-experiencia img {
+    max-height: 110px;
+  }
+
+  .soft-skills-section {
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .soft-skills-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .skill-card {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .skill-card img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .resumo-profissional,
+  .ferramentas-section {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 12px;
+  }
+
+  .resumo-profissional h3,
+  .ferramentas-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .resumo-profissional p{
+    font-size: 0.9rem;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  .ferramentas-grid img {
+    width: 35px;
+    height: 35px;
+  }
+}
+

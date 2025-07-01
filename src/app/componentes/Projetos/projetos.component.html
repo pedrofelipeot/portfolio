@@ -10,86 +10,110 @@
       <a [routerLink]="[]" fragment="backend">Back-end</a>
     </nav>
 
-   <!-- Front-end -->
-<!-- Front-end -->
-<section id="frontend" class="sessao">
-  <h2 class="sessao-titulo">Projetos Front-end</h2>
-  <div class="cards">
-    <div class="card" data-date="Maio 2024" data-projeto="portfolio-angular">
-      <div class="card-conteudo">
-        <h3>Portfólio Angular</h3>
-        <p>Site pessoal responsivo e moderno em Angular.</p>
-      </div>
-      <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Março 2024" data-projeto="site-barbearia">
-      <div class="card-conteudo">
-        <h3>Site para Barbearia</h3>
-        <p>Site estático elegante para barbearia local.</p>
-      </div>
-      <button (click)="abrirDetalhes('site-barbearia')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Janeiro 2024" data-projeto="site-receitas">
-      <div class="card-conteudo">
-        <h3>Site de Receitas</h3>
-        <p>Receitas com consumo de API externa.</p>
-      </div>
-      <button (click)="abrirDetalhes('site-receitas')">Ver detalhes</button>
-    </div>
-  </div>
-</section>
+  <section id="frontend" class="sessao">
+      <h2 class="sessao-titulo">Projetos Front-end</h2>
+      <div class="cards">
+        <div class="card-container">
+          <div class="card-data">Maio 2024</div>
+          <div class="card" data-projeto="portfolio-angular">
+            <div class="card-conteudo">
+              <h3>Portfólio Angular</h3>
+              <p>Site pessoal responsivo e moderno em Angular.</p>
+            </div>
+            <button (click)="abrirDetalhes('portfolio-angular')">Ver detalhes</button>
+          </div>
+        </div>
 
-<!-- Jogos -->
-<section id="jogos" class="sessao">
-  <h2 class="sessao-titulo">Projetos de Jogos</h2>
-  <div class="cards">
-    <div class="card" data-date="Outubro 2023" data-projeto="classicos-processing">
-      <div class="card-conteudo">
-        <h3>Jogos com Processing</h3>
-        <p>Jogos clássicos desenvolvidos em Processing.</p>
-      </div>
-      <button (click)="abrirDetalhes('classicos-processing')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Setembro 2023" data-projeto="block-duel">
-      <div class="card-conteudo">
-        <h3>Block Duel</h3>
-        <p>Jogo de blocos criado no Processing.</p>
-      </div>
-      <button (click)="abrirDetalhes('block-duel')">Ver detalhes</button>
-    </div>
-  </div>
-</section>
+        <div class="card-container">
+          <div class="card-data">Março 2024</div>
+          <div class="card" data-projeto="site-barbearia">
+            <div class="card-conteudo">
+              <h3>Site para Barbearia</h3>
+              <p>Site estático elegante para barbearia local.</p>
+            </div>
+            <button (click)="abrirDetalhes('site-barbearia')">Ver detalhes</button>
+          </div>
+        </div>
 
-<!-- Back-end -->
-<section id="backend" class="sessao">
-  <h2 class="sessao-titulo">Projetos Back-end</h2>
-  <div class="cards">
-    <div class="card" data-date="Janeiro 2024" data-projeto="webscraping-ans">
-      <div class="card-conteudo">
-        <h3>WebScraping ANS</h3>
-        <p>Extração de dados de PDFs usando Java e Python.</p>
+        <div class="card-container">
+          <div class="card-data">Janeiro 2024</div>
+          <div class="card" data-projeto="site-receitas">
+            <div class="card-conteudo">
+              <h3>Site de Receitas</h3>
+              <p>Receitas com consumo de API externa.</p>
+            </div>
+            <button (click)="abrirDetalhes('site-receitas')">Ver detalhes</button>
+          </div>
+        </div>
       </div>
-      <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Dezembro 2023" data-projeto="sistema-biblioteca">
-      <div class="card-conteudo">
-        <h3>Sistema Biblioteca</h3>
-        <p>Gerenciamento de empréstimos de livros.</p>
+    </section>
+
+    <!-- Jogos -->
+    <section id="jogos" class="sessao">
+      <h2 class="sessao-titulo">Projetos de Jogos</h2>
+      <div class="cards">
+        <div class="card-container">
+          <div class="card-data">Outubro 2023</div>
+          <div class="card" data-projeto="classicos-processing">
+            <div class="card-conteudo">
+              <h3>Jogos com Processing</h3>
+              <p>Jogos clássicos desenvolvidos em Processing.</p>
+            </div>
+            <button (click)="abrirDetalhes('classicos-processing')">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card-data">Setembro 2023</div>
+          <div class="card" data-projeto="block-duel">
+            <div class="card-conteudo">
+              <h3>Block Duel</h3>
+              <p>Jogo de blocos criado no Processing.</p>
+            </div>
+            <button (click)="abrirDetalhes('block-duel')">Ver detalhes</button>
+          </div>
+        </div>
       </div>
-      <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
-    </div>
-    <div class="card" data-date="Dezembro 2023" data-projeto="gerenciamento-tarefas">
-      <div class="card-conteudo">
-        <h3>Gerenciamento de Tarefas</h3>
-        <p>API para organização de tarefas com Spring Boot.</p>
+    </section>
+
+    <!-- Back-end -->
+    <section id="backend" class="sessao">
+      <h2 class="sessao-titulo">Projetos Back-end</h2>
+      <div class="cards">
+        <div class="card-container">
+          <div class="card-data">Janeiro 2024</div>
+          <div class="card" data-projeto="webscraping-ans">
+            <div class="card-conteudo">
+              <h3>WebScraping ANS</h3>
+              <p>Extração de dados de PDFs usando Java e Python.</p>
+            </div>
+            <button (click)="abrirDetalhes('webscraping-ans')">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card-data">Dezembro 2023</div>
+          <div class="card" data-projeto="sistema-biblioteca">
+            <div class="card-conteudo">
+              <h3>Sistema Biblioteca</h3>
+              <p>Gerenciamento de empréstimos de livros.</p>
+            </div>
+            <button (click)="abrirDetalhes('sistema-biblioteca')">Ver detalhes</button>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card-data">Dezembro 2023</div>
+          <div class="card" data-projeto="gerenciamento-tarefas">
+            <div class="card-conteudo">
+              <h3>Gerenciamento de Tarefas</h3>
+              <p>API para organização de tarefas com Spring Boot.</p>
+            </div>
+            <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
+          </div>
+        </div>
       </div>
-      <button (click)="abrirDetalhes('gerenciamento-tarefas')">Ver detalhes</button>
-    </div>
-  </div>
-</section>
-
-
-
+    </section>
   </div>
 
   <!-- Modal de Detalhes -->
