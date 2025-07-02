@@ -1,3 +1,4 @@
+/* Estilos principais */
 section {
   width: 100%;
   min-height: 100vh;
@@ -62,70 +63,28 @@ section {
   font-size: 1.05rem;
 }
 
-/* Responsivo para tablets e celulares */
-@media (max-width: 768px) {
+/* 📱 Smartphones bem pequenos (ex: iPhone 5) */
+@media (max-width: 359px) {
   section {
-    padding: 2rem 1rem;
+    padding: 0.8rem;
+  }
+
+  .geral {
+    padding: 0.8rem;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .conteudo-texto {
     margin-left: 0;
   }
 
-  .geral {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
   .conteudo {
     align-items: center;
   }
 
-  .conteudo h1 {
-    font-size: 1.6rem;
-  }
-
-  .conteudo p {
-    font-size: 1rem;
-  }
-
-  .imagem img {
-    width: 12.5rem;
-    height: 12.5rem;
-  }
-}
-
-/* Responsivo para telas muito pequenas (ex: celulares antigos) */
-@media (max-width: 480px) {
-  .conteudo h1 {
-    font-size: 1.4rem;
-  }
-
-  .conteudo p {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    text-align: justify;
-    font-size: 0.95rem;
-  }
-
-  .imagem img {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .geral {
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-
-  section {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 400px) {
   .conteudo h1 {
     font-size: 1.2rem;
   }
@@ -140,13 +99,126 @@ section {
     width: 8.5rem;
     height: 8.5rem;
   }
+}
 
-  .geral {
-    padding: 0.8rem;
-    gap: 1rem;
+/* 📱 Smartphones modernos (ex: Galaxy S, iPhones recentes) */
+@media (min-width: 360px) and (max-width: 440px) {
+  section {
+    padding: 1rem;
   }
 
+  .geral {
+    padding: 1rem;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .conteudo-texto {
+    margin-left: 0;
+  }
+
+  .conteudo {
+    align-items: center;
+  }
+
+  .conteudo h1 {
+    font-size: 1.4rem;
+  }
+
+  .conteudo p {
+    font-size: 0.95rem;
+    padding: 0 1.2rem;
+    text-align: justify;
+  }
+
+  .imagem img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
+/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
+@media (min-width: 441px) and (max-width: 767px) {
   section {
-    padding: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .geral {
+    padding: 1.2rem;
+    gap: 1.8rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90vw;
+  }
+
+  .conteudo-texto {
+    margin-left: 0;
+  }
+
+  .conteudo {
+    align-items: center;
+  }
+
+  .conteudo h1 {
+    font-size: 1.7rem;
+  }
+
+  .conteudo p {
+    font-size: 1.2rem;
+    padding: 0 1.4rem;
+    text-align: justify;
+  }
+
+  .imagem img {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+
+/* 💻 Tablets médios até notebooks pequenos */
+@media (min-width: 768px) and (max-width: 990px) {
+  section {
+    padding: 1.5rem;
+  }
+
+  .geral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 85vw;
+    padding: 2rem 1rem;
+  }
+
+  .conteudo-texto {
+    margin-left: 0;
+  }
+
+  .imagem img {
+    width: 15em;
+    height: 15rem;
+  }
+
+  .conteudo {
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .conteudo h1 {
+    font-size: 1.9rem;
+    padding: 0 1.5rem;
+  }
+
+  .conteudo p {
+    font-size: 1.4rem;
+    text-align: justify;
+    overflow-wrap: break-word;
   }
 }

@@ -1,8 +1,23 @@
+.fundo-vanta {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* evita que o fundo bloqueie cliques */
+}
+
 .fundo-experiencia {
-  background: linear-gradient(135deg, #1a1a2e, #162447);
   color: #fff;
   padding: 5rem 20px;
-  
+  position: relative;
+  z-index: 1; /* fica acima do fundo */
+}
+
+.fundo-experiencia .container,
+.titulo-principal {
+  position: relative;
+  z-index: 2; /* garante que o conteúdo apareça */
 }
 
 .container {
@@ -17,7 +32,10 @@ img{
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 4rem;
+  background-color: rgba(0, 0, 0, 0.6); /* fundo escuro translúcido */
   margin-top: 4rem;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .titulo-principal span {

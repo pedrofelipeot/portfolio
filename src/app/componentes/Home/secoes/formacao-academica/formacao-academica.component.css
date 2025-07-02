@@ -92,35 +92,8 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .formacao-titulo {
-    font-size: 2rem;
-  }
-
-  .certificados-titulo {
-    font-size: 1.6rem;
-  }
-
-  .formacao-container {
-    padding: 0 10px;
-  }
-
-  .card {
-    padding: 1.5rem 1.25rem;
-  }
-
-  .cert-meta {
-    gap: 1rem;
-  }
-
-  .cert-year,
-  .cert-hours {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
+/* 📱 Smartphones bem pequenos (ex: iPhone 5) */
+@media (max-width: 359px) {
   .formacao-titulo {
     font-size: 1.6rem;
   }
@@ -141,5 +114,104 @@
 
   .half-width {
     width: 100%;
+  }
+}
+
+/* 📱 Smartphones modernos (ex: Galaxy S, iPhones recentes) */
+@media (min-width: 360px) and (max-width: 440px) {
+  .formacao-titulo {
+    font-size: 1.6rem;
+  }
+
+  .certificados-titulo {
+    font-size: 1.4rem;
+  }
+
+  .cert-year,
+  .cert-hours {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+}
+
+/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
+@media (min-width: 441px) and (max-width: 767px) {
+  .formacao-titulo {
+    font-size: 1.8rem;
+  }
+
+  .certificados-titulo {
+    font-size: 1.5rem;
+  }
+
+  .formacao-container {
+    padding: 0 10px;
+  }
+
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cert-meta {
+    gap: 1.2rem;
+  }
+
+  .cert-year,
+  .cert-hours {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+}
+
+/* 💻 Tablets médios até notebooks pequenos */
+@media (min-width: 768px) and (max-width: 990px) {
+  .formacao-titulo {
+    font-size: 2rem;
+  }
+
+  .certificados-titulo {
+    font-size: 1.7rem;
+  }
+
+  .formacao-container {
+    padding: 0 20px;
+  }
+
+  .card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .cert-meta {
+    gap: 1.5rem;
+  }
+
+  .cert-year,
+  .cert-hours {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .card-row {
+    flex-direction: row;
+  }
+
+  .half-width {
+    width: 48%;
   }
 }
