@@ -1,12 +1,14 @@
-
 header {
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0; /* força alinhamento */
   z-index: 1000;
   width: 100%;
-  height: 4.5rem; /* igual à altura da .nav-bar */
+  height: 4.5rem;
   background-color: #0F1520;
+
+  transform: translateZ(0); /* força renderização */
 }
 
 .logo-link {
@@ -86,8 +88,10 @@ header {
   background: none;
   cursor: pointer;
   z-index: 1001; /* maior que o .mobile-menu */
-}
 
+  /* Melhora performance no carregamento */
+  will-change: transform;
+}
 
 .hamburger span {
   display: block;
@@ -121,8 +125,11 @@ header {
   background: linear-gradient(180deg, #0f1520 0%, #141e30 100%);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   z-index: 999;
+
+  /* Corrige flash/deslocamento no carregamento */
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  visibility: hidden; /* esconde até abrir */
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem;
@@ -130,6 +137,8 @@ header {
 
 .mobile-menu.open {
   transform: translateX(0);
+  visibility: visible; /* mostra quando abrir */
+  transition: transform 0.3s ease, visibility 0s linear 0s;
 }
 
 .mobile-menu ul {
@@ -169,7 +178,6 @@ header {
 .mobile-menu .nav-link:hover::after {
   width: 100%;
 }
-
 
 /* Responsivo */
 @media (max-width: 768px) {

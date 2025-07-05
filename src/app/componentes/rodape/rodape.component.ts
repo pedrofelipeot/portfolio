@@ -14,7 +14,7 @@ export class RodapeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     ScrollReveal().reveal('.site-footer', {
       opacity: 0,          // começa invisível
-      duration: 2000,      // duração do fade-in (1s)
+      duration: 1500,      // duração do fade-in (1s)
       easing: 'ease-out',
       reset: false         // só anima uma vez
     });

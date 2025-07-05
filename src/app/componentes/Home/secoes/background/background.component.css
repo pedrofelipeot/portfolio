@@ -5,28 +5,32 @@
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(15, 1fr); /* de 20 → 15 */
+  grid-template-rows: repeat(15, 1fr);
   background: hsl(0, 0%, 11%);
   filter: saturate(2);
   overflow: hidden;
-  z-index: -1; /* Coloquei -1 para garantir que fique abaixo de outros elementos */
+  z-index: -1;
 }
-.baixar{
+
+.baixar {
   padding-top: 4.5rem;
 }
+
 .colorBox {
-  z-index: 1; /* <<< acima do fundo mas abaixo do menu */
-  filter: brightness(1.1);
-  transition: 2s ease;
-  position: relative;
-  margin: 2px;
+  z-index: 1;
   background: #1d1d1d;
+  margin: 2px;
+
+  /* Removido: filter, transition (custosos em grande escala) */
+  /* Se quiser ativar no futuro: */
+  /* transition: background 2s ease; */
+  /* filter: brightness(1.1); */
 }
 
 .colorBox:hover {
   background: #00bfff;
-  transition-duration: 0s;
+  /* transition-duration: 0s; */ /* pode manter se quiser efeito instantâneo */
 }
 
 .backgroundAmim {
@@ -38,9 +42,8 @@
   background: #00bfff;
   filter: blur(60px);
   animation: animBack 6s linear infinite;
-  z-index: 1; /* também acima do fundo base */
+  z-index: 1;
 }
-
 
 @keyframes animBack {
   0% {

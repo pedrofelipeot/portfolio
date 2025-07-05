@@ -1,3 +1,4 @@
+// linha-tempo.component.ts
 import { Component, AfterViewInit } from '@angular/core';
 
 declare var ScrollReveal: any;
@@ -34,7 +35,7 @@ export class LinhaTempoComponent implements AfterViewInit {
       duration: 1200,
       easing: 'ease-out',
       opacity: 0,
-      interval: 200, // anima um por um com intervalo
+      interval: 200,
       reset: false
     });
   }

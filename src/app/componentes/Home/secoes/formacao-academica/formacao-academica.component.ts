@@ -12,7 +12,7 @@ export class FormacaoAcademicaComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     ScrollReveal().reveal('.formacao-titulo', {
-      distance: '30px',
+      distance: '20px',
       origin: 'bottom',
       duration: 1000,
       easing: 'ease-out',
@@ -22,9 +22,9 @@ export class FormacaoAcademicaComponent implements AfterViewInit {
     });
 
     ScrollReveal().reveal('.card.full-width', {
-      distance: '50px',
-      origin: 'left',
-      duration: 1200,
+      distance: '20px',
+      origin: 'bottom',
+      duration: 1000,
       easing: 'ease-out',
       opacity: 0,
       delay: 200,
@@ -32,7 +32,7 @@ export class FormacaoAcademicaComponent implements AfterViewInit {
     });
 
     ScrollReveal().reveal('.certificados-titulo', {
-      distance: '30px',
+      distance: '20px',
       origin: 'bottom',
       duration: 1000,
       easing: 'ease-out',
@@ -42,12 +42,12 @@ export class FormacaoAcademicaComponent implements AfterViewInit {
     });
 
     ScrollReveal().reveal('.card.half-width', {
-      distance: '50px',
-      origin: 'right',
-      duration: 1200,
+      distance: '20px',
+      origin: 'bottom',
+      duration: 1000,
       easing: 'ease-out',
       opacity: 0,
-      interval: 200, // anima um de cada vez
+      interval: 200,
       reset: false
     });
   }
