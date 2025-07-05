@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+
+declare var ScrollReveal: any;
 
 @Component({
   selector: 'app-contatos',
@@ -6,10 +8,45 @@ import { Component } from '@angular/core';
   templateUrl: './contatos.component.html',
   styleUrl: './contatos.component.css'
 })
-export class ContatosComponent {
- emailDestino: string = 'felipepedrofutebol2004@gmail.com'; // Substituir pelo seu e-mail
+export class ContatosComponent implements AfterViewInit {
+  emailDestino: string = 'felipepedrofutebol2004@gmail.com'; // Substitua pelo seu e-mail
 
   get formAction() {
     return `https://formsubmit.co/${this.emailDestino}`;
+  }
+
+  ngAfterViewInit(): void {
+    // Título
+    ScrollReveal().reveal('.contato-box h2', {
+      distance: '40px',
+      origin: 'bottom',
+      duration: 1000,
+      opacity: 0,
+      easing: 'ease-out',
+      delay: 100,
+      reset: false
+    });
+
+    // Links de contato (LinkedIn, Email, GitHub)
+    ScrollReveal().reveal('.contato-meios a', {
+      distance: '30px',
+      origin: 'left',
+      duration: 800,
+      opacity: 0,
+      easing: 'ease-out',
+      interval: 200, // anima cada um com delay
+      reset: false
+    });
+
+    // Formulário
+    ScrollReveal().reveal('.form-container', {
+      distance: '20px',
+      scale: 0.95,
+      opacity: 0,
+      duration: 1200,
+      easing: 'ease-out',
+      delay: 200,
+      reset: false
+    });
   }
 }

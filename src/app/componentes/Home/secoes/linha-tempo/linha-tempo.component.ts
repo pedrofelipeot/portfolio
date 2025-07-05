@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+
+declare var ScrollReveal: any;
 
 @Component({
   selector: 'app-linha-tempo',
@@ -6,10 +8,34 @@ import { Component } from '@angular/core';
   templateUrl: './linha-tempo.component.html',
   styleUrl: './linha-tempo.component.css'
 })
-export class LinhaTempoComponent {
-  abertos: boolean[] = [false, false, false];
+export class LinhaTempoComponent implements AfterViewInit {
+  abertos: boolean[] = [false, false, false, false];
 
   alternar(index: number): void {
     this.abertos[index] = !this.abertos[index];
+  }
+
+  ngAfterViewInit(): void {
+    // Título principal anima de baixo para cima
+    ScrollReveal().reveal('.timeline-section h2', {
+      distance: '40px',
+      origin: 'bottom',
+      duration: 1000,
+      easing: 'ease-out',
+      opacity: 0,
+      delay: 100,
+      reset: false
+    });
+
+    // Cada item da timeline entra um de cada vez da direita
+    ScrollReveal().reveal('.timeline-item', {
+      distance: '50px',
+      origin: 'right',
+      duration: 1200,
+      easing: 'ease-out',
+      opacity: 0,
+      interval: 200, // anima um por um com intervalo
+      reset: false
+    });
   }
 }

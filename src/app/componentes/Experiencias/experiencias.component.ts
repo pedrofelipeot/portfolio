@@ -1,8 +1,8 @@
 import { Component, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 
 declare var VANTA: any;
-declare var ScrollReveal: any;
 declare var THREE: any;
+declare var ScrollReveal: any;
 
 @Component({
   selector: 'app-experiencias',
@@ -16,12 +16,69 @@ export class ExperienciasComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.initVanta();
 
-    ScrollReveal().reveal('.fade-in-up', {
+    // ScrollReveal - animações
+    ScrollReveal().reveal('.titulo-principal', {
+      origin: 'top',
       distance: '40px',
       duration: 800,
+      opacity: 0,
       easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.experiencia-bloco', {
       origin: 'bottom',
-      interval: 150
+      distance: '30px',
+      duration: 700,
+      opacity: 0,
+      interval: 150,
+      easing: 'ease-out',
+      reset: false,
+    });
+
+    ScrollReveal().reveal('.soft-skills-section', {
+      origin: 'left',
+      distance: '40px',
+      duration: 700,
+      opacity: 0,
+      delay: 300,
+      easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.skill-card', {
+      origin: 'bottom',
+      distance: '20px',
+      duration: 1000,
+      opacity: 0,
+      interval: 100,
+      delay: 900,
+      easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.resumo-profissional', {
+      origin: 'right',
+      distance: '40px',
+      duration: 800,
+      opacity: 0,
+      delay: 400,
+      easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.ferramentas-section', {
+      origin: 'bottom',
+      distance: '30px',
+      duration: 700,
+      opacity: 0,
+      delay: 500,
+      easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.ferramentas-grid img', {
+      scale: 0.8,
+      duration: 600,
+      opacity: 0,
+      interval: 100,
+      delay: 700,
+      easing: 'ease-out',
     });
   }
 
@@ -29,7 +86,6 @@ export class ExperienciasComponent implements AfterViewInit, OnDestroy {
     if (this.vantaEffect) this.vantaEffect.destroy();
   }
 
-  // Reaplica a animação com novo size quando a tela muda
   @HostListener('window:resize')
   onResize() {
     if (this.vantaEffect) {

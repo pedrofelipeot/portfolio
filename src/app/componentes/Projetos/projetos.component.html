@@ -117,6 +117,12 @@
   </div>
 
   <!-- Modal de Detalhes -->
+   <!-- Modal de imagem fullscreen para mobile -->
+<div class="fullscreen-imagem-overlay" *ngIf="imagemFullScreen" (click)="fecharImagemFullscreenMobile()">
+  <img [src]="imagemFullScreen" alt="Imagem em tela cheia" />
+  <button class="fechar" aria-label="Fechar imagem" (click)="fecharImagemFullscreenMobile(); $event.stopPropagation()">✖</button>
+</div>
+
   <div class="detalhes-overlay" *ngIf="projetoSelecionado">
     <div class="detalhes-conteudo">
       <button class="fechar" (click)="fecharDetalhes()" aria-label="Fechar">✖</button>
@@ -147,8 +153,12 @@
           </section>
           <section class="modal-bloco">
               <h4>Demonstração</h4>
-               <img src="/assets/portfolio-exemplo.png" alt="Demonstração do projeto portfolio-angular" class="img-demonstração"/>
-          </section>
+              <img src="/assets/portfolio-exemplo.png"
+               alt="Demonstração do projeto portfolio-angular"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/portfolio-exemplo.png')" />
+        </section>
+        
 
           <section class="modal-bloco">
             <h4>Desafio técnico</h4>
@@ -192,7 +202,10 @@
 
           <section class="modal-bloco">
               <h4>Demonstração</h4>
-               <img src="/assets/barbearia-exemplo.png" alt="Demonstração do projeto site-barbearia" class="img-demonstração"/>
+               <img src="/assets/barbearia-exemplo.png"
+               alt="Demonstração do projeto site-barbearia"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/barbearia-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -230,7 +243,10 @@
 
           <section class="modal-bloco">
               <h4>Demonstração</h4>
-               <img src="/assets/receitas-exemplo.png" alt="Demonstração do projeto portfolio-angular" class="img-demonstração"/>
+               <img src="/assets/receitas-exemplo.png"
+               alt="Demonstração do projeto site-receitas"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/receitas-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -266,7 +282,10 @@
 
           <section class="modal-bloco">
               <h4>Demonstração</h4>
-               <img src="/assets/classico-exemplo.png" alt="Demonstração do projeto portfolio-angular" class="img-demonstração"/>
+               <img src="/assets/classico-exemplo.png"
+               alt="Demonstração do projeto classicos-processing"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/classico-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -308,7 +327,10 @@
 
           <section class="modal-bloco">
             <h4>Demonstração</h4>
-            <img src="/assets/block-duel-exemplo.png" alt="Demonstração do projeto Block Duel" class="img-demonstração"/>
+            <img src="/assets/block-duel-exemplo.png"
+               alt="Demonstração do projeto Block Duel"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/block-duel-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -350,7 +372,10 @@
 
           <section class="modal-bloco">
               <h4>Demonstração</h4>
-               <img src="/assets/webscraping-exemplo.png" alt="Demonstração do projeto WebScraping ANS" class="img-demonstração"/>
+                <img src="/assets/webscraping-exemplo.png"
+               alt="Demonstração do projeto WebScraping ANS"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/webscraping-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -389,7 +414,10 @@
 
           <section class="modal-bloco">
             <h4>Demonstração</h4>
-            <img src="/assets/library-exemplo.png" alt="Demonstração do projeto Sistema Biblioteca" class="img-demonstração"/>
+            <img src="/assets/library-exemplo.png"
+               alt="Demonstração do projeto Sistema Biblioteca"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/library-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -424,7 +452,10 @@
 
           <section class="modal-bloco">
               <h4>Demonstração</h4>
-               <img src="/assets/todolist-exemplo.png" alt="Demonstração do projeto ToDo List" class="img-demonstração"/>
+                <img src="/assets/todolist-exemplo.png"
+               alt="Demonstração do projeto ToDo List"
+               class="img-demonstração"
+               (click)="abrirImagemFullscreenMobile('/assets/todolist-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">

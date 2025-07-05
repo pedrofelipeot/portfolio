@@ -2,6 +2,8 @@ import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 declare var VANTA: any;
+declare var ScrollReveal: any;
+
 
 @Component({
   selector: 'app-projetos',
@@ -12,6 +14,7 @@ declare var VANTA: any;
 export class ProjetosComponent implements AfterViewInit, OnDestroy {
   private vantaEffect: any;
   projetoSelecionado: string | null = null;
+  imagemFullScreen: string | null = null;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -43,6 +46,42 @@ export class ProjetosComponent implements AfterViewInit, OnDestroy {
         }, 50);
       }
     });
+
+    // === ScrollReveal animations ===
+    ScrollReveal().reveal('#titulo', {
+      origin: 'top',
+      distance: '30px',
+      duration: 800,
+      opacity: 0,
+      easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.menu a', {
+      origin: 'bottom',
+      distance: '20px',
+      duration: 600,
+      opacity: 0,
+      interval: 150,
+      easing: 'ease-out',
+    });
+
+    ScrollReveal().reveal('.sessao-titulo', {
+      origin: 'left',
+      distance: '40px',
+      duration: 800,
+      opacity: 0,
+      easing: 'ease-out',
+      delay: 200,
+    });
+
+    ScrollReveal().reveal('.card-container', {
+      origin: 'bottom',
+      distance: '30px',
+      duration: 600,
+      opacity: 0,
+      interval: 150,
+      easing: 'ease-out',
+    });
   }
 
   abrirDetalhes(projeto: string) {
@@ -58,4 +97,16 @@ export class ProjetosComponent implements AfterViewInit, OnDestroy {
       this.vantaEffect.destroy();
     }
   }
+  
+ abrirImagemFullscreenMobile(src: string) {
+  if (window.innerWidth <= 768) {
+    this.imagemFullScreen = src;
+  }
+}
+
+fecharImagemFullscreenMobile() {
+  this.imagemFullScreen = null;
+}
+
+
 }
