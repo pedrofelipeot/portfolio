@@ -1,4 +1,3 @@
-// linha-tempo.component.ts
 import { Component, AfterViewInit } from '@angular/core';
 
 declare var ScrollReveal: any;
@@ -17,7 +16,7 @@ export class LinhaTempoComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Título principal anima de baixo para cima
+
     ScrollReveal().reveal('.timeline-section h2', {
       distance: '40px',
       origin: 'bottom',
@@ -28,7 +27,6 @@ export class LinhaTempoComponent implements AfterViewInit {
       reset: false
     });
 
-    // Cada item da timeline entra um de cada vez da direita
     ScrollReveal().reveal('.timeline-item', {
       distance: '50px',
       origin: 'right',

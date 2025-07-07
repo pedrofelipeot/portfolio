@@ -23,7 +23,7 @@
   font-family: "Krona One", sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
-  max-width: 31.25rem; 
+  max-width: 31.25rem;
   color: #dcdcdc;
   margin: 0.5rem 0;
 }
@@ -31,14 +31,13 @@
 .intro-img img {
   max-width: 20rem;
   transition: transform 0.3s ease;
-  
+
 }
 
 .intro-img img:hover {
   transform: scale(1.05);
 }
 
-/* 📱 Smartphones bem pequenos (ex: iPhone 5) */
 @media (max-width: 359px) {
   .intro-container {
     flex-direction: column-reverse;
@@ -58,7 +57,6 @@
   }
 }
 
-/* 📱 Smartphones modernos (ex: Galaxy S, iPhones recentes) */
 @media (min-width: 360px) and (max-width: 440px) {
   .intro-container {
     flex-direction: column-reverse;
@@ -69,7 +67,7 @@
     font-size: 1.5rem;
   }
 
-    .intro-text {
+  .intro-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,10 +75,10 @@
   }
 
   .intro-text p {
-    
+
     font-size: 0.8rem;
     width: 85vw;
-    margin-bottom: 2px;/* ou ajuste como preferir */
+    margin-bottom: 2px;
   }
 
 
@@ -89,9 +87,8 @@
   }
 }
 
-/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
 @media (min-width: 441px) and (max-width: 767px) {
-  intro-container {
+  .intro-container {
     flex-direction: column-reverse;
     text-align: center;
   }
@@ -119,7 +116,6 @@
   }
 }
 
-/* 💻 Tablets médios até notebooks pequenos */
 @media (min-width: 768px) and (max-width: 990px) {
   .intro-container {
     flex-direction: column-reverse;
@@ -133,14 +129,10 @@
 
   .intro-text p {
     font-size: 1.6rem;
-    text-align:center ;
+    text-align: center;
   }
 
   .intro-img img {
     max-width: 25rem;
   }
 }
-
-
-
-

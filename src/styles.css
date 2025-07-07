@@ -4,17 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-      /*transform: none !important; */
-  }
-
-h1, h2, h3, h4{
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p, a, ul{
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+a,
+ul {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -24,39 +28,38 @@ p, a, ul{
 
 .titulo-branco {
   margin-left: 8px;
- color: white;
+  color: white;
 }
 
-/* Scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 10px; /* largura padrão mais grossa */
-  height: 10px; /* altura para scroll horizontal */
-  transition: width 0.3s ease; /* animação suave na largura */
+  width: 10px;
+  height: 10px;
+  transition: width 0.3s ease;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a; /* fundo da trilha (cinza escuro quase preto) */
+  background: #1a1a1a;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0078d7, #00c3ff); /* azul vibrante */
+  background: linear-gradient(180deg, #0078d7, #00c3ff);
   border-radius: 5px;
-  border: 2px solid #1a1a1a; /* borda para separar do track */
-  transition: all 0.3s ease; /* animação suave para expandir */
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar:hover {
-  width: 14px; /* scroll inteiro mais grosso ao hover */
+  width: 14px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #005fa3, #00aaff); /* azul mais escuro no hover */
+  background: linear-gradient(180deg, #005fa3, #00aaff);
   border-radius: 6px;
 }
 
-/* Scrollbar para Firefox */
+
 html {
-  scrollbar-width: auto; /* normal no Firefox */
-  scrollbar-color: #0078d7 #1a1a1a; /* thumb azul, track cinza escuro */
+  scrollbar-width: auto;
+  scrollbar-color: #0078d7 #1a1a1a;
 }

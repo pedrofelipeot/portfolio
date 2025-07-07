@@ -16,7 +16,7 @@ export class ProjetosComponent implements AfterViewInit, OnDestroy {
   projetoSelecionado: string | null = null;
   imagemFullScreen: string | null = null;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngAfterViewInit(): void {
     const container = document.querySelector('.fundo-projetos');
@@ -47,7 +47,6 @@ export class ProjetosComponent implements AfterViewInit, OnDestroy {
       }
     });
 
-    // === ScrollReveal animations ===
     ScrollReveal().reveal('#titulo', {
       origin: 'top',
       distance: '30px',
@@ -97,16 +96,14 @@ export class ProjetosComponent implements AfterViewInit, OnDestroy {
       this.vantaEffect.destroy();
     }
   }
-  
- abrirImagemFullscreenMobile(src: string) {
-  if (window.innerWidth <= 768) {
-    this.imagemFullScreen = src;
+
+  abrirImagemFullscreenMobile(src: string) {
+    if (window.innerWidth <= 768) {
+      this.imagemFullScreen = src;
+    }
   }
-}
 
-fecharImagemFullscreenMobile() {
-  this.imagemFullScreen = null;
-}
-
-
+  fecharImagemFullscreenMobile() {
+    this.imagemFullScreen = null;
+  }
 }

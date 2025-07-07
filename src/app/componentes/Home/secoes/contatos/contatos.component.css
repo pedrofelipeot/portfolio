@@ -1,4 +1,3 @@
-/* ======= CONTATO - DESKTOP ======= */
 .contato-section {
   position: relative;
   padding: 60px 20px;
@@ -19,7 +18,7 @@
   text-align: center;
 }
 
-.contato-box > *:not(:last-child) {
+.contato-box>*:not(:last-child) {
   margin-bottom: 28px;
 }
 
@@ -109,7 +108,6 @@
   z-index: 0;
 }
 
-/* ======= RESPONSIVIDADE ======= */
 @media (max-width: 768px) {
   .contato-box {
     padding: 30px 20px;
@@ -159,7 +157,7 @@
   }
 
   .contato-meios a span {
-    display: none; /* remove o texto visualmente */
+    display: none;
   }
 
   .contato-meios a .icones-contatos {
@@ -169,4 +167,3 @@
     filter: brightness(0) invert(1);
   }
 }
-

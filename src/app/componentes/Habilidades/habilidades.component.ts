@@ -10,7 +10,7 @@ declare var ScrollReveal: any;
 })
 export class HabilidadesComponent implements AfterViewInit {
   ngAfterViewInit(): void {
-    // Títulos das seções
+
     ScrollReveal().reveal('.agrupador h2, .linha-titulo', {
       distance: '40px',
       origin: 'bottom',
@@ -21,18 +21,17 @@ export class HabilidadesComponent implements AfterViewInit {
       reset: false
     });
 
-    // Cards de habilidades
     ScrollReveal().reveal('.cards-inline .card', {
       distance: '30px',
       scale: 0.95,
       opacity: 0,
       duration: 800,
       easing: 'ease-out',
-      interval: 200, // faz efeito "stagger" nos cards
+      interval: 200,
       reset: false
     });
 
-    // Etapas do plano de estudo
+
     ScrollReveal().reveal('.etapa', {
       distance: '50px',
       origin: 'left',

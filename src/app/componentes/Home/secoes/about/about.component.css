@@ -1,4 +1,3 @@
-/* Estilos principais */
 section {
   width: 100%;
   min-height: 100vh;
@@ -63,7 +62,6 @@ section {
   font-size: 1.05rem;
 }
 
-/* 📱 Smartphones bem pequenos (ex: iPhone 5) */
 @media (max-width: 359px) {
   section {
     padding: 0.8rem;
@@ -101,7 +99,6 @@ section {
   }
 }
 
-/* 📱 Smartphones modernos (ex: Galaxy S, iPhones recentes) */
 @media (min-width: 360px) and (max-width: 440px) {
   section {
     padding: 1rem;
@@ -139,8 +136,6 @@ section {
   }
 }
 
-/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
-/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
 @media (min-width: 441px) and (max-width: 767px) {
   section {
     padding: 1.2rem;
@@ -179,8 +174,6 @@ section {
   }
 }
 
-
-/* 💻 Tablets médios até notebooks pequenos */
 @media (min-width: 768px) and (max-width: 990px) {
   section {
     padding: 1.5rem;

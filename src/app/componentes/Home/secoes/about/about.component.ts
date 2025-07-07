@@ -22,8 +22,8 @@ export class AboutComponent implements AfterViewInit {
     });
 
     ScrollReveal().reveal('.imagem img', {
-      distance: '20px',        // reduzido de 50px
-      origin: 'bottom',        // ajustado de 'left'
+      distance: '20px',
+      origin: 'bottom',
       duration: 1200,
       easing: 'ease-out',
       opacity: 0,
@@ -32,8 +32,8 @@ export class AboutComponent implements AfterViewInit {
     });
 
     ScrollReveal().reveal('.conteudo-texto p', {
-      distance: '20px',        // reduzido de 50px
-      origin: 'bottom',        // ajustado de 'right'
+      distance: '20px',
+      origin: 'bottom',
       duration: 1200,
       easing: 'ease-out',
       opacity: 0,

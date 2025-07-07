@@ -1,12 +1,9 @@
-/* linha-tempo.component.css */
 
-/* Caixa maior para cobrir todo o fundo */
 .timeline-wrapper {
   background: #ececec;
   padding: 60px 20px;
 }
 
-/* Seção da timeline centralizada */
 .timeline-section {
   padding: 40px 20px;
   max-width: 600px;
@@ -15,20 +12,16 @@
   background: #0F1520;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-
-  /* ADICIONADO para evitar deslocamento lateral do menu */
   position: relative;
-  overflow-x: hidden;  /* esconde qualquer translação que extrapole */
+  overflow-x: hidden; 
 }
 
-/* Título centralizado e estilizado */
 .timeline-section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
 }
 
-/* Cada item da linha do tempo */
 .timeline-item {
   margin-bottom: 20px;
   border-radius: 12px;
@@ -36,10 +29,8 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   background-color: white;
   transition: transform 0.2s;
-
-  /* Otimizações para performance e evitar layout shift */
   will-change: transform, opacity;
-  position: relative; /* garantir contexto para transform */
+  position: relative; 
   backface-visibility: hidden;
 }
 
@@ -47,7 +38,6 @@
   transform: translateY(-2px);
 }
 
-/* Botão de expansão */
 .timeline-toggle {
   background: linear-gradient(90deg, #0077ff, #005fd1);
   color: white;
@@ -71,7 +61,6 @@
   background: linear-gradient(90deg, #005fd1, #004bb3);
 }
 
-/* Conteúdo revelado */
 .timeline-content {
   background: #eef3fd;
   padding: 16px 20px;
@@ -115,7 +104,6 @@
   box-shadow: 0 4px 12px rgba(0, 119, 255, 0.2);
 }
 
-/* Animação de entrada */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -127,7 +115,6 @@
   }
 }
 
-/* 📱 Smartphones bem pequenos (ex: iPhone 5) */
 @media (max-width: 359px) {
   .timeline-wrapper {
     padding: 4rem 10px;
@@ -163,7 +150,6 @@
   }
 }
 
-/* 📱 Smartphones modernos (ex: Galaxy S, iPhones recentes) */
 @media (min-width: 360px) and (max-width: 440px) {
   .timeline-wrapper {
     padding: 5rem 12px;
@@ -199,7 +185,6 @@
   }
 }
 
-/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
 @media (min-width: 441px) and (max-width: 767px) {
   .timeline-wrapper {
     padding: 6rem 15px;
@@ -235,7 +220,6 @@
   }
 }
 
-/* 💻 Tablets médios até notebooks pequenos */
 @media (min-width: 768px) and (max-width: 990px) {
   .timeline-wrapper {
     padding: 6.5rem 20px;

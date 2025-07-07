@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./background.component.css']
 })
 export class BackgroundComponent {
-  colorBoxes = Array(225); // 15x15 = 225 blocos
+  colorBoxes = Array(225); 
 }

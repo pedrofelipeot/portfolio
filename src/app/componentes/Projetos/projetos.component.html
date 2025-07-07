@@ -10,7 +10,7 @@
       <a [routerLink]="[]" fragment="backend">Back-end</a>
     </nav>
 
-  <section id="frontend" class="sessao">
+    <section id="frontend" class="sessao">
       <h2 class="sessao-titulo">Projetos Front-end</h2>
       <div class="cards">
         <div class="card-container">
@@ -48,7 +48,6 @@
       </div>
     </section>
 
-    <!-- Jogos -->
     <section id="jogos" class="sessao">
       <h2 class="sessao-titulo">Projetos de Jogos</h2>
       <div class="cards">
@@ -76,7 +75,6 @@
       </div>
     </section>
 
-    <!-- Back-end -->
     <section id="backend" class="sessao">
       <h2 class="sessao-titulo">Projetos Back-end</h2>
       <div class="cards">
@@ -116,12 +114,11 @@
     </section>
   </div>
 
-  <!-- Modal de Detalhes -->
-   <!-- Modal de imagem fullscreen para mobile -->
-<div class="fullscreen-imagem-overlay" *ngIf="imagemFullScreen" (click)="fecharImagemFullscreenMobile()">
-  <img [src]="imagemFullScreen" alt="Imagem em tela cheia" />
-  <button class="fechar" aria-label="Fechar imagem" (click)="fecharImagemFullscreenMobile(); $event.stopPropagation()">✖</button>
-</div>
+  <div class="fullscreen-imagem-overlay" *ngIf="imagemFullScreen" (click)="fecharImagemFullscreenMobile()">
+    <img [src]="imagemFullScreen" alt="Imagem em tela cheia" />
+    <button class="fechar" aria-label="Fechar imagem"
+      (click)="fecharImagemFullscreenMobile(); $event.stopPropagation()">✖</button>
+  </div>
 
   <div class="detalhes-overlay" *ngIf="projetoSelecionado">
     <div class="detalhes-conteudo">
@@ -152,17 +149,16 @@
             </ul>
           </section>
           <section class="modal-bloco">
-              <h4>Demonstração</h4>
-              <img src="/assets/portfolio-exemplo.png"
-               alt="Demonstração do projeto portfolio-angular"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/portfolio-exemplo.png')" />
-        </section>
-        
+            <h4>Demonstração</h4>
+            <img src="/assets/portfolio-exemplo.png" alt="Demonstração do projeto portfolio-angular"
+              class="img-demonstração" (click)="abrirImagemFullscreenMobile('/assets/portfolio-exemplo.png')" />
+          </section>
+
 
           <section class="modal-bloco">
             <h4>Desafio técnico</h4>
-            <p>Para criar um visual moderno sem comprometer a performance, utilizei animações leves com Vanta.js, garantindo uma experiência interativa e com carregamento otimizado.</p>
+            <p>Para criar um visual moderno sem comprometer a performance, utilizei animações leves com Vanta.js,
+              garantindo uma experiência interativa e com carregamento otimizado.</p>
           </section>
 
           <section class="modal-bloco">
@@ -173,9 +169,6 @@
             </ul>
           </section>
         </div>
-
-
-
 
         <div *ngSwitchCase="'site-barbearia'" class="modal-conteudo">
           <h3 class="modal-titulo">Site para Barbearia</h3>
@@ -201,11 +194,9 @@
           </section>
 
           <section class="modal-bloco">
-              <h4>Demonstração</h4>
-               <img src="/assets/barbearia-exemplo.png"
-               alt="Demonstração do projeto site-barbearia"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/barbearia-exemplo.png')" />
+            <h4>Demonstração</h4>
+            <img src="/assets/barbearia-exemplo.png" alt="Demonstração do projeto site-barbearia"
+              class="img-demonstração" (click)="abrirImagemFullscreenMobile('/assets/barbearia-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -242,17 +233,16 @@
           </section>
 
           <section class="modal-bloco">
-              <h4>Demonstração</h4>
-               <img src="/assets/receitas-exemplo.png"
-               alt="Demonstração do projeto site-receitas"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/receitas-exemplo.png')" />
+            <h4>Demonstração</h4>
+            <img src="/assets/receitas-exemplo.png" alt="Demonstração do projeto site-receitas" class="img-demonstração"
+              (click)="abrirImagemFullscreenMobile('/assets/receitas-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
             <h4>Links</h4>
             <ul>
-              <li><a href="https://github.com/pedrofelipeot/Site-de-Receitas-com-Angular" target="_blank">GitHub</a></li>
+              <li><a href="https://github.com/pedrofelipeot/Site-de-Receitas-com-Angular" target="_blank">GitHub</a>
+              </li>
             </ul>
           </section>
         </div>
@@ -281,11 +271,9 @@
           </section>
 
           <section class="modal-bloco">
-              <h4>Demonstração</h4>
-               <img src="/assets/classico-exemplo.png"
-               alt="Demonstração do projeto classicos-processing"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/classico-exemplo.png')" />
+            <h4>Demonstração</h4>
+            <img src="/assets/classico-exemplo.png" alt="Demonstração do projeto classicos-processing"
+              class="img-demonstração" (click)="abrirImagemFullscreenMobile('/assets/classico-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -327,10 +315,8 @@
 
           <section class="modal-bloco">
             <h4>Demonstração</h4>
-            <img src="/assets/block-duel-exemplo.png"
-               alt="Demonstração do projeto Block Duel"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/block-duel-exemplo.png')" />
+            <img src="/assets/block-duel-exemplo.png" alt="Demonstração do projeto Block Duel" class="img-demonstração"
+              (click)="abrirImagemFullscreenMobile('/assets/block-duel-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -371,11 +357,9 @@
           </section>
 
           <section class="modal-bloco">
-              <h4>Demonstração</h4>
-                <img src="/assets/webscraping-exemplo.png"
-               alt="Demonstração do projeto WebScraping ANS"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/webscraping-exemplo.png')" />
+            <h4>Demonstração</h4>
+            <img src="/assets/webscraping-exemplo.png" alt="Demonstração do projeto WebScraping ANS"
+              class="img-demonstração" (click)="abrirImagemFullscreenMobile('/assets/webscraping-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -414,10 +398,8 @@
 
           <section class="modal-bloco">
             <h4>Demonstração</h4>
-            <img src="/assets/library-exemplo.png"
-               alt="Demonstração do projeto Sistema Biblioteca"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/library-exemplo.png')" />
+            <img src="/assets/library-exemplo.png" alt="Demonstração do projeto Sistema Biblioteca"
+              class="img-demonstração" (click)="abrirImagemFullscreenMobile('/assets/library-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
@@ -451,16 +433,15 @@
           </section>
 
           <section class="modal-bloco">
-              <h4>Demonstração</h4>
-                <img src="/assets/todolist-exemplo.png"
-               alt="Demonstração do projeto ToDo List"
-               class="img-demonstração"
-               (click)="abrirImagemFullscreenMobile('/assets/todolist-exemplo.png')" />
+            <h4>Demonstração</h4>
+            <img src="/assets/todolist-exemplo.png" alt="Demonstração do projeto ToDo List" class="img-demonstração"
+              (click)="abrirImagemFullscreenMobile('/assets/todolist-exemplo.png')" />
           </section>
 
           <section class="modal-bloco">
             <h4>Desafio técnico</h4>
-            <p>O desafio técnico foi implementar autenticação com JWT para garantir que apenas usuários autenticados pudessem acessar os endpoints</p>
+            <p>O desafio técnico foi implementar autenticação com JWT para garantir que apenas usuários autenticados
+              pudessem acessar os endpoints</p>
           </section>
 
           <section class="modal-bloco">

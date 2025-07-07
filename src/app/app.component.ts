@@ -14,7 +14,7 @@ export class AppComponent {
   @HostListener('window:scroll', [])
   onScroll(): void {
     const alturaScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.mostrarBotaoTopo = alturaScroll > 300;  // Mostra a seta só depois de 300px rolados
+    this.mostrarBotaoTopo = alturaScroll > 300;
   }
 
   voltarAoTopo(): void {

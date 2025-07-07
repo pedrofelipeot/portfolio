@@ -22,10 +22,10 @@ export class MenuComponent {
     }
   }
   fecharMenu() {
-  const menuMobile = this.menuMobile.nativeElement;
-  const hamburger = document.querySelector('.hamburger');
+    const menuMobile = this.menuMobile.nativeElement;
+    const hamburger = document.querySelector('.hamburger');
 
-  menuMobile.classList.remove('open');
-  hamburger?.classList.remove('open');
-}
+    menuMobile.classList.remove('open');
+    hamburger?.classList.remove('open');
+  }
 }

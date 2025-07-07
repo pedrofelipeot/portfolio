@@ -16,7 +16,6 @@ export class ExperienciasComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.initVanta();
 
-    // ScrollReveal - animações
     ScrollReveal().reveal('.titulo-principal', {
       origin: 'top',
       distance: '40px',

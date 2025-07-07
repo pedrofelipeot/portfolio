@@ -9,14 +9,14 @@ declare var ScrollReveal: any;
   styleUrl: './contatos.component.css'
 })
 export class ContatosComponent implements AfterViewInit {
-  emailDestino: string = 'felipepedrofutebol2004@gmail.com'; // Substitua pelo seu e-mail
+  emailDestino: string = 'felipepedrofutebol2004@gmail.com';
 
   get formAction() {
     return `https://formsubmit.co/${this.emailDestino}`;
   }
 
   ngAfterViewInit(): void {
-    // Título
+
     ScrollReveal().reveal('.contato-box h2', {
       distance: '40px',
       origin: 'bottom',
@@ -27,18 +27,16 @@ export class ContatosComponent implements AfterViewInit {
       reset: false
     });
 
-    // Links de contato (LinkedIn, Email, GitHub)
     ScrollReveal().reveal('.contato-meios a', {
       distance: '30px',
       origin: 'left',
       duration: 800,
       opacity: 0,
       easing: 'ease-out',
-      interval: 200, // anima cada um com delay
+      interval: 200,
       reset: false
     });
 
-    // Formulário
     ScrollReveal().reveal('.form-container', {
       distance: '20px',
       scale: 0.95,

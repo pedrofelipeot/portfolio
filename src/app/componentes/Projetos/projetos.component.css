@@ -1,25 +1,20 @@
-/* -------------------- Fundo geral -------------------- */
-
-/* -------------------- Container central -------------------- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 5rem 20px 40px;
 }
 
-/* -------------------- Título principal -------------------- */
 #titulo {
   text-align: center;
   font-size: 2.5rem;
   color: white;
   margin-bottom: 4rem;
   margin-top: 4rem;
-  background-color: rgba(0, 0, 0, 0.6); /* fundo escuro translúcido */
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 1rem;
 }
 
-/* -------------------- Menu com divisórias -------------------- */
 .menu {
   display: flex;
   justify-content: center;
@@ -51,7 +46,6 @@
   color: #69c0ff;
 }
 
-/* -------------------- Seções -------------------- */
 .sessao {
   margin-top: 5rem;
   max-width: 900px;
@@ -67,7 +61,6 @@
   padding-left: 15px;
 }
 
-/* -------------------- Layout dos cards -------------------- */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -80,11 +73,11 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   padding: 30px;
-  height: 260px; /* ou outro valor fixo ou min-height */
+  height: 260px;
   width: 260px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Começa de cima */
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   color: white;
@@ -92,7 +85,7 @@
   margin: auto;
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border 0.4s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  overflow: hidden; /* ← ESSA LINHA RESOLVE */
+  overflow: hidden;
 }
 
 .card-conteudo {
@@ -104,11 +97,13 @@
   text-align: center;
 }
 
-/* Efeito de hover com imagem de fundo */
 .card::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -121,7 +116,6 @@
   opacity: 0.4;
 }
 
-/* Imagem de fundo por projeto */
 .card[data-projeto="portfolio-angular"]::after {
   background-image: url('/assets/portfolio.png');
 }
@@ -154,20 +148,20 @@
   background-image: url('/assets/to-do-list.png');
 }
 
-
-.card h3, .card p, .card a, .card button {
+.card h3,
+.card p,
+.card a,
+.card button {
   position: relative;
   z-index: 2;
 }
 
-/* Sombra azul no hover */
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px #00bfffc7;
-  
+
 }
 
-/* Melhor destaque nos textos ao hover com imagem */
 .card:hover h3,
 .card:hover p,
 .card:hover a,
@@ -185,7 +179,6 @@
   transition: all 0.3s ease;
 }
 
-/* Estilo padrão dos textos antes do hover */
 .card h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
@@ -199,7 +192,6 @@
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* Borda interna com leve brilho fixo (antes do hover) */
 .card::before {
   content: attr(data-date);
   position: absolute;
@@ -211,7 +203,7 @@
   padding: 6px 12px;
   font-size: 0.8rem;
   border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
@@ -220,7 +212,6 @@
   transition: all 0.4s ease;
 }
 
-/* -------------------- Botão de Ver Detalhes -------------------- */
 .card button {
   margin-top: auto;
   padding: 8px 16px;
@@ -269,10 +260,10 @@
   object-fit: contain;
 }
 
-/* -------------------- Detalhes Overlay -------------------- */
 .detalhes-overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
@@ -291,7 +282,7 @@
   border-radius: 12px;
   max-width: 75vw;
   width: 90%;
-  max-height: 85vh; /* ← Limita a altura do conteúdo ao tamanho da tela */
+  max-height: 85vh;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   position: relative;
 }
@@ -307,10 +298,10 @@
 }
 
 .detalhes-conteudo .fechar {
-   position: sticky;     /* ← Fixa o botão dentro do modal */
+  position: sticky;
   top: 10px;
   right: 15px;
-  background-color: #00bfff;   /* Cor de fundo destacada */
+  background-color: #00bfff;
   border: none;
   color: white;
   font-size: 1.2rem;
@@ -318,15 +309,16 @@
   cursor: pointer;
   z-index: 999;
   padding: 6px 12px;
-  border-radius: 50%;           /* Botão redondo */
-  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);  /* Sombra azul clara */
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .detalhes-conteudo .fechar:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 18px rgba(0, 191, 255, 0.7);  /* Mais destaque no hover */
+  box-shadow: 0 6px 18px rgba(0, 191, 255, 0.7);
 }
+
 .modal-conteudo {
   width: 62vw;
   color: #eaeaea;
@@ -373,10 +365,10 @@
   color: #ffffff;
 }
 
-/* Overlay para imagem em tela cheia no mobile */
 .fullscreen-mobile-overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.95);
@@ -391,12 +383,16 @@
   max-width: 100%;
   max-height: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
+
 .fullscreen-imagem-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -421,9 +417,6 @@
   cursor: pointer;
 }
 
-
-
-/* -------------------- Responsivo -------------------- */
 @media (max-width: 768px) {
   .card {
     height: 220px;
@@ -497,52 +490,48 @@
     width: 100%;
   }
 
-  .modal-titulo{
+  .modal-titulo {
     font-size: 1.3rem;
   }
 
   .detalhes-conteudo {
-    max-height: 90vh;     /* ocupa até 90% da altura da tela */
-    max-width: 85vw;      /* quase toda a largura da tela */
-    width: 85vw;          /* força largura maior */
-    overflow-y: auto;     /* adiciona rolagem vertical se precisar */
-    padding: 16px 20px;   /* padding mais equilibrado */
-    border-radius: 8px;   /* cantos mais suaves */
+    max-height: 90vh;
+    max-width: 85vw;
+    width: 85vw;
+    overflow-y: auto;
+    padding: 16px 20px;
+    border-radius: 8px;
   }
 
   .modal-conteudo {
-    width: 90%;            /* força a ocupar toda a largura do modal */
-    padding: 0;             /* remove padding extra */
-    margin: auto;              /* remove margem extra */
+    width: 90%;
+    padding: 0;
+    margin: auto;
     margin-top: 1rem;
   }
 
   .modal-bloco {
-    width: 100%;            /* cada bloco ocupa toda a largura */
-    padding: 0;             /* remove padding lateral */
-    margin: 8px 0;          /* só espaço vertical entre blocos */
+    width: 100%;
+    padding: 0;
+    margin: 8px 0;
   }
 
   .modal-bloco p,
   .modal-bloco ul {
-    width: 100%;           /* força p/ ocupar toda a largura */
+    width: 100%;
     font-size: 1rem;
     line-height: 1.5;
-     hyphens: auto;        /* separa palavras longas com hífen */
-    word-wrap: break-word; /* quebra palavras se necessário */
-  overflow-wrap: break-word;
-  text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
   }
 
   .img-demonstração {
-    width: 100%;            /* imagem ocupa toda a largura */
+    width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 6px;
     display: block;
   }
 }
-
-
-
-

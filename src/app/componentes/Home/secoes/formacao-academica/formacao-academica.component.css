@@ -6,7 +6,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Título Formação Acadêmica */
 .formacao-titulo {
   font-size: 2.5rem;
   color: #0055aa;
@@ -14,7 +13,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Título Certificados */
 .certificados-titulo {
   font-size: 2rem;
   color: #ffffff;
@@ -26,20 +24,18 @@
   text-align: center;
 }
 
-/* Container principal */
 .formacao-container {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
 }
 
-/* Cards */
 .card {
   background: #1e1e2f;
   padding: 20px 25px;
   margin-bottom: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   color: #eee;
 }
 
@@ -47,27 +43,23 @@
   width: 100%;
 }
 
-/* Linha de cards lado a lado */
 .card-row {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-/* Metade da largura (em telas maiores) */
 .half-width {
   flex: 1;
   min-width: 250px;
 }
 
-/* Issuer (quem emite) */
 .issuer {
   font-style: italic;
   color: #a0a0a0;
   margin-bottom: 1rem;
 }
 
-/* Área dos dados Ano e Carga Horária */
 .cert-meta {
   display: flex;
   gap: 1.5rem;
@@ -91,8 +83,6 @@
   color: #82c0ff;
 }
 
-/* Responsividade */
-/* 📱 Smartphones bem pequenos (ex: iPhone 5) */
 @media (max-width: 359px) {
   .formacao-titulo {
     font-size: 1.6rem;
@@ -117,7 +107,6 @@
   }
 }
 
-/* 📱 Smartphones modernos (ex: Galaxy S, iPhones recentes) */
 @media (min-width: 360px) and (max-width: 440px) {
   .formacao-titulo {
     font-size: 1.6rem;
@@ -142,7 +131,6 @@
   }
 }
 
-/* 📱 Phablets e tablets pequenos (ex: Galaxy Fold, tablets pequenos) */
 @media (min-width: 441px) and (max-width: 767px) {
   .formacao-titulo {
     font-size: 1.8rem;
@@ -179,7 +167,6 @@
   }
 }
 
-/* 💻 Tablets médios até notebooks pequenos */
 @media (min-width: 768px) and (max-width: 990px) {
   .formacao-titulo {
     font-size: 2rem;

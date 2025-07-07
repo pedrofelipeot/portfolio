@@ -2,13 +2,13 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; /* força alinhamento */
+  right: 0;
   z-index: 1000;
   width: 100%;
   height: 4.5rem;
   background-color: #0F1520;
 
-  transform: translateZ(0); /* força renderização */
+  transform: translateZ(0);
 }
 
 .logo-link {
@@ -87,9 +87,7 @@ header {
   border: none;
   background: none;
   cursor: pointer;
-  z-index: 1001; /* maior que o .mobile-menu */
-
-  /* Melhora performance no carregamento */
+  z-index: 1001;
   will-change: transform;
 }
 
@@ -125,10 +123,8 @@ header {
   background: linear-gradient(180deg, #0f1520 0%, #141e30 100%);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   z-index: 999;
-
-  /* Corrige flash/deslocamento no carregamento */
   transform: translateX(100%);
-  visibility: hidden; /* esconde até abrir */
+  visibility: hidden;
   transition: transform 0.3s ease, visibility 0s linear 0.3s;
   display: flex;
   flex-direction: column;
@@ -137,7 +133,7 @@ header {
 
 .mobile-menu.open {
   transform: translateX(0);
-  visibility: visible; /* mostra quando abrir */
+  visibility: visible;
   transition: transform 0.3s ease, visibility 0s linear 0s;
 }
 
@@ -179,7 +175,6 @@ header {
   width: 100%;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .logo-img {
     width: 2rem;
