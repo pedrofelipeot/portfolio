@@ -463,8 +463,8 @@
 
 @media (max-width: 480px) {
   .card {
-    height: 200px;
-    width: 180px;
+    height: 220px;
+    width: 200px;
     padding: 14px;
     display: flex;
     flex-direction: column;
@@ -472,12 +472,12 @@
   }
 
   .card h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 2px;
   }
 
   .card p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin: 0;
     overflow: visible;
     white-space: normal;

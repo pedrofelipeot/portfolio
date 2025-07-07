@@ -26,3 +26,37 @@ p, a, ul{
   margin-left: 8px;
  color: white;
 }
+
+/* Scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* largura padrão mais grossa */
+  height: 10px; /* altura para scroll horizontal */
+  transition: width 0.3s ease; /* animação suave na largura */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* fundo da trilha (cinza escuro quase preto) */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0078d7, #00c3ff); /* azul vibrante */
+  border-radius: 5px;
+  border: 2px solid #1a1a1a; /* borda para separar do track */
+  transition: all 0.3s ease; /* animação suave para expandir */
+}
+
+::-webkit-scrollbar:hover {
+  width: 14px; /* scroll inteiro mais grosso ao hover */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #005fa3, #00aaff); /* azul mais escuro no hover */
+  border-radius: 6px;
+}
+
+/* Scrollbar para Firefox */
+html {
+  scrollbar-width: auto; /* normal no Firefox */
+  scrollbar-color: #0078d7 #1a1a1a; /* thumb azul, track cinza escuro */
+}
