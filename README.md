@@ -1,59 +1,80 @@
-# Portifolio
+# Portfolio Pessoal - Pedro Felipe
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+> Projeto de portfólio desenvolvido em Angular para apresentar meus projetos, habilidades e evolução como desenvolvedor.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Sobre o projeto
 
+Este portfólio foi criado com Angular, é totalmente responsivo e pensado para oferecer uma ótima experiência em qualquer dispositivo.  
+Aqui você pode conhecer meus projetos, as tecnologias que utilizo e acompanhar meu crescimento profissional.
+
+---
+
+## 📂 Tecnologias utilizadas
+
+- Angular  
+- TypeScript  
+- HTML5  
+- CSS3  
+
+---
+
+## 📸 Demonstração
+
+<!-- Adicione imagens ou GIFs do seu projeto aqui -->
+
+![Exemplo de tela principal](https://github.com/pedrofelipeot/portifolio/blob/main/src/assets/portfolio-exemplo.png)
+
+---
+
+## 📦 Como executar localmente
+
+1. Clone o repositório:  
+```bash
+git clone https://github.com/pedrofelipeot/portifolio.git
+```
+
+2. Entre na pasta do projeto:  
+```bash
+cd portifolio
+```
+
+3. Instale as dependências:  
+```bash
+npm install
+```
+
+4. Rode o projeto:  
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+5. Acesse no navegador:  
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🌐 Deploy
 
-## Building
+Você pode acessar o projeto online em:  
+[https://pedrofelipeot.vercel.app](https://pedrofelipeot.vercel.app)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📄 Licença
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Este projeto está licenciado sob a licença MIT.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📞 Contato
 
-```bash
-ng test
-```
+Pedro Felipe Oliveira Tavares  
+[LinkedIn](https://www.linkedin.com/in/pedrofelipeot/) | [GitHub](https://github.com/pedrofelipeot)
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<!-- Se quiser, adicione aqui mais informações ou agradecimentos -->
